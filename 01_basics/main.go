@@ -64,35 +64,6 @@ func main() {
 	var istCool bool = true
 	fmt.Println("Ist Go cool?", istCool)
 
-	// ==========================================
-	// ⚠️ Häufige Fehler: Typ-Konvertierung (aus dem Video)
-	// ==========================================
-	//
-	// ❌ FALSCH: int und float64 direkt verrechnen
-	//   var a int = 5
-	//   var b float64 = 3.14
-	//   var sum = a + b     // COMPILER-FEHLER: mismatched types int and float64
-	//
-	// ✅ RICHTIG: Explizite Konvertierung
-	//   var sum = float64(a) + b  // 8.14 ✓
-	//
-	// ❌ FALSCH: Verschiedene int-Typen mischen
-	//   var breite int = 10
-	//   var hoehe int32 = 20
-	//   var flaeche = breite + hoehe  // COMPILER-FEHLER!
-	//
-	// ✅ RICHTIG: Beide auf gleichen Typ bringen
-	//   var flaeche = breite + int(hoehe)  // 30 ✓
-	//
-	// ⚠️ Achtung: float → int schneidet Nachkommastellen ab (kein Runden!)
-	//   var pi = 3.99
-	//   var gerundet = int(pi)  // 3, nicht 4!
-
-	fmt.Println("\n⚠️ Wichtige Lektionen aus dem Video:")
-	fmt.Println("   1. Strings: var s string → s ist leer (\"\"), nicht nil!")
-	fmt.Println("   2. Typ-Konvertierung: int + float64 geht nicht direkt! Immer explizit konvertieren")
-	fmt.Println("   3. Konstanten: const ist zur Compile-Zeit fix, nicht zur Laufzeit änderbar")
-
 	// --- Nullwerte (Zero Values) ---
 	// In Go hat jede Variable einen Startwert, auch ohne Zuweisung:
 	var x int     // 0
@@ -102,44 +73,6 @@ func main() {
 
 	fmt.Println("\n=== Zero Values ===")
 	fmt.Printf("int: %d, float64: %.1f, string: %q, bool: %v\n", x, y, z, w)
-
-	// ==========================================
-	// ⚠️ Häufige Fehler: Strings (aus dem Video)
-	// ==========================================
-	//
-	// ❌ FALSCH: string kann nicht nil sein!
-	//   var s string = nil  // COMPILER-FEHLER!
-	//
-	// ✅ RICHTIG: String ohne Wert = leerer String ""
-	//   var s string  // s = ""  (Zero Value)
-	//   s := "Hallo"   // direkt zuweisen
-	//
-	// ❌ VORSICHT: int = 0 bedeutet "0 Jahre", nicht "unbekannt"
-	//   var alter int = 0  // Syntaktisch korrekt, aber semantisch zweideutig
-	//   Ist das "0 Jahre alt" oder "Alter unbekannt"?
-	//
-	// ✅ BESSER: Separaten booleschen Zustand verwenden
-	//   var alterBekannt = false              // klar: "unbekannt"
-	//   var alterWert = 30                    // separat speichern
-	// (Für Pointer *int siehe Kapitel 6)
-
-	// ==========================================
-	// ⚠️ Häufige Fehler: Konstanten (aus dem Video)
-	// ==========================================
-	//
-	// ❌ FALSCH: Konstante nachträglich ändern
-	//   const x = 10
-	//   x = 20  // COMPILER-FEHLER: x ist unveränderlich!
-	//
-	// ❌ FALSCH: const für Werte verwenden, die erst zur Laufzeit bekannt sind
-	//   const heute = time.Now()  // COMPILER-FEHLER!
-	//
-	// ✅ RICHTIG: const nur für Werte, die zur Compile-Zeit feststehen
-	//   const pi = 3.14159
-	//   const url = "https://api.example.com"
-	//
-	// ✅ Für Laufzeit-Werte: var verwenden
-	//   var heute = time.Now()
 
 	// --- Konstanten ---
 	// Konstanten können nicht geändert werden!
@@ -164,6 +97,27 @@ func main() {
 	fmt.Println("\n=== Formatierte Ausgabe ===")
 	fmt.Printf("Name: %s, Alter: %d, Größe: %.1f m\n", name, alter, groesse)
 	fmt.Printf("Typ von name: %T, Typ von alter: %T\n", name, alter)
+
+	// ==========================================
+	// ⚠️  Häufige Fehler – Zusammenfassung (aus dem Video)
+	// ==========================================
+	//
+	// 1. STRINGS: var s string = nil ist VERBOTEN!
+	//    var s string → s ist leer (""), nicht nil!
+	//
+	// 2. TYP-KONVERTIERUNG: int + float64 geht NICHT direkt!
+	//    Immer explizit konvertieren: float64(a) + b
+	//    Auch verschiedene int-Typen (int + int32) sind inkompatibel.
+	//    float → int schneidet Nachkommastellen ab (kein Runden!)
+	//
+	// 3. KONSTANTEN: const ist zur Compile-Zeit fix.
+	//    Einmal gesetzt → unveränderlich.
+	//    const x = os.Hostname() geht nicht! Dafür var verwenden.
+
+	fmt.Println("\n⚠️  Häufige Fehler aus dem Video:")
+	fmt.Println("   1. Strings: var s string = nil ❌ → s ist leer (\"\"), nicht nil!")
+	fmt.Println("   2. Typen: int + float64 ❌ → immer explizit konvertieren!")
+	fmt.Println("   3. Konstanten: const ist fix zur Compile-Zeit, nicht änderbar ❌")
 
 	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
