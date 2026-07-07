@@ -1,0 +1,82 @@
+# golangci-lint Konfiguration für den Go-Kurs
+#
+# Anfängerfreundlich: nur die wichtigsten Linter, didaktische
+# Kommentare dürfen länger als 80 Zeichen sein.
+
+run:
+  timeout: 5m
+  # Welche Verzeichnisse geprüft werden
+  tests: true
+  # Lockerere Regeln für didaktische Übungs-Kapitel
+  skip-dirs:
+    - solutions
+
+linters:
+  # Standard-Linter (alle aktiviert durch disable-all=false).
+  disable-all: false
+  enable:
+    - govet        # go vet – offizielle statische Analyse
+    - gofmt        # erzwingt gofmt-Formatierung
+    - ineffassign  # ungenutzte Zuweisungen
+    - unused       # ungenutzte Variablen/Funktionen
+    - staticcheck  # erweiterte statische Analyse
+    - errcheck     # nicht geprüfte Fehler
+    - gosimple     # Vereinfachungsvorschläge
+    - lll          # lange Zeilen — explizit aktiviert (siehe lll-Settings unten)
+
+  # Bewusst DEAKTIVIERTE Linter (mit Begründung):
+  # - gochecknoglobals – wir nutzen absichtlich globale Maps für Beispiele
+  # - gochecknoinits   – wir nutzen init() in 08_packages_modules
+  # - gocognit         – manche Beispiele sind bewusst komplexer
+  # - cyclop           – didaktische Beispiele dürfen verschachtelt sein
+  # - dupl             – die 12-Sprachen-Tabelle ist absichtlich repetitive
+  # - funlen           – Funktionen dürfen lang sein, wenn sie zusammengehören
+  # - goconst          – Strings dürfen wiederholt werden
+  # - gocyclo          – didaktische Beispiele sind nicht immer „optimal"
+  # - godot            – Kommentare enden nicht immer mit Punkt
+  # - gofumpt          – strenger als gofmt, wir nutzen das normale gofmt
+  # - gomnd            – magische Zahlen in Beispielen sind didaktisch wertvoll
+  # - lll              – LANG-ZEILEN erlaubt wegen didaktischer Kommentare
+  # - mnd              – dito
+  # - nestif           – didaktische Beispiele dürfen verschachtelt sein
+  # - nlreturn         – NL vor return ist Geschmackssache
+  # - paralleltest     – Test-Reihenfolge ist hier egal
+  # - prealloc         – Pre-Alloc ist Performance-Optimierung, nicht Stil
+  # - revive           – eigene Regeln, passt nicht zu unserem Stil
+  # - stylecheck       – ähnlich zu golint, teils strenger
+  # - tagliatelle      – Struct-Tag-Alignment ist Geschmackssache
+  # - testpackage      – Tests dürfen im selben Paket sein
+  # - unparam          – ungenutzte Parameter erlauben wir (z. B. Callbacks)
+  # - varnamelen       – Variablennamen sollen kurz sein
+  # - wrapcheck        – Fehlerwrapping ist nicht immer nötig
+  # - wsl              – whitespace-Regeln sind zu streng
+
+linters-settings:
+  # Längere Zeilen erlauben (wir haben didaktische Kommentare, Glossar-Einträge
+  # und 12-Sprachen-Datensätze mit ausführlichen deutschen Beschreibungen).
+  # Übeltäter: 00_geschichte/main.go:61 — der „Go"-Datensatz in der Sprachen-Tabelle
+  # (212 Zeichen) soll als kompletter Einzeiler für Anfänger sichtbar bleiben.
+  lll:
+    line-length: 220
+    tab-width: 4
+
+  # gofmt-Einstellungen.
+  gofmt:
+    simplify: true
+
+issues:
+  # Maximale Anzahl an Issues, die pro Lint-Lauf gemeldet werden.
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+  # Ausnahmen für unsere didaktischen Beispiele.
+  exclude-rules:
+    # Hauptfunktion darf lang sein.
+    - path: _test\.go
+      linters:
+        - dupl
+        - funlen
+    - path: main\.go
+      linters:
+        - funlen
+        - gocyclo

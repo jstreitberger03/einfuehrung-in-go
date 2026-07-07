@@ -118,9 +118,9 @@ func quadratwurzel(x float64) (float64, error) {
 
 // Vordefinierte Fehler (Konvention: Err-Präfix)
 var (
-	ErrUngueltigeID         = errors.New("ungültige Benutzer-ID")
+	ErrUngueltigeID          = errors.New("ungültige Benutzer-ID")
 	ErrBenutzerNichtGefunden = errors.New("Benutzer nicht gefunden")
-	ErrKontoGesperrt        = errors.New("Konto ist gesperrt")
+	ErrKontoGesperrt         = errors.New("Konto ist gesperrt")
 )
 
 type BankKonto struct {

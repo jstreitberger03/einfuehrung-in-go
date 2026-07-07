@@ -140,9 +140,9 @@ func httpServer() {
 // ==========================================
 
 type Todo struct {
-	ID      int    `json:"id"`
-	Text    string `json:"text"`
-	Erledigt bool  `json:"erledigt"`
+	ID       int    `json:"id"`
+	Text     string `json:"text"`
+	Erledigt bool   `json:"erledigt"`
 }
 
 type TodoListe struct {

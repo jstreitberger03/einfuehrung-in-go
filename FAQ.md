@@ -1,6 +1,6 @@
 # FAQ — Einführung in Go
 
-Häufige Probleme und ihre Lösungen. Steht etwas nicht hier? [Erstelle ein Issue](https://github.com/julianstreitberger/einfuehrung-in-go/issues).
+Häufige Probleme und ihre Lösungen. Steht etwas nicht hier? [Erstelle ein Issue](https://github.com/jstreitberger03/einfuehrung-in-go/issues).
 
 ---
 
@@ -148,7 +148,7 @@ go mod tidy  # Lädt fehlende Abhängigkeiten
 
 ## Hilfe finden
 
-- 🐛 Bug gefunden? [Issue erstellen](https://github.com/julianstreitberger/einfuehrung-in-go/issues)
+- 🐛 Bug gefunden? [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues)
 - 📖 Offizielle [Go-Dokumentation](https://go.dev/doc/)
 - 💬 [Go Forum](https://forum.golangbridge.org/)
 - 🤖 [Go by Example](https://gobyexample.com/) — Beispiele auf Deutsch/Englisch

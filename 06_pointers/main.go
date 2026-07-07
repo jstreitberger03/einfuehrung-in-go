@@ -24,14 +24,14 @@ func main() {
 
 	fmt.Println("Wert von x:", x)
 	fmt.Println("Adresse von x:", &x)
-	fmt.Println("Pointer p:", p)      // speichert die Adresse von x
-	fmt.Println("Wert via *p:", *p)   // * = Dereferenzierung: Wert an der Adresse
+	fmt.Println("Pointer p:", p)    // speichert die Adresse von x
+	fmt.Println("Wert via *p:", *p) // * = Dereferenzierung: Wert an der Adresse
 
 	// --- Wert über Pointer ändern ---
-	*p = 100                         // Ändere den Wert an der Adresse von x
+	*p = 100 // Ändere den Wert an der Adresse von x
 	fmt.Println("\nNach *p = 100:")
-	fmt.Println("x =", x)            // 100 – x wurde geändert!
-	fmt.Println("*p =", *p)          // 100
+	fmt.Println("x =", x)   // 100 – x wurde geändert!
+	fmt.Println("*p =", *p) // 100
 
 	// ==========================================
 	// 2. Pointer als Funktionsparameter

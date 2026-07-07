@@ -7,6 +7,13 @@
 // - Grundlegende Struktur eines Go-Programms verstehen
 //
 // 📖 Los geht's!
+//    💡 Wenn du **ganz neu** in der Programmierung bist:
+//       1) lies zuerst das Kapitel `00_erste_schritte/` (reine Theorie),
+//       2) dann `00_geschichte/` (Geschichte hinter Go),
+//       3) und DANN dieses Kapitel hier.
+//
+// 🕘 Reihenfolge für Anfänger: 00_erste_schritte (optional) → 00_geschichte →
+// 00_intro → 01_basics → …
 
 package main
 

@@ -21,9 +21,9 @@ func main() {
 	fmt.Println("=== Funktionen ===")
 
 	// --- Einfacher Funktionsaufruf ---
-	begruessung("Anna")      // Hallo, Anna!
-	begruessung("Ben")       // Hallo, Ben!
-	begruessung("Clara")     // Hallo, Clara!
+	begruessung("Anna")  // Hallo, Anna!
+	begruessung("Ben")   // Hallo, Ben!
+	begruessung("Clara") // Hallo, Clara!
 
 	// --- Funktion mit Rückgabewert ---
 	quadrat := quadrieren(7)

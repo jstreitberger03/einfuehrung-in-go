@@ -1,0 +1,180 @@
+# GitHub Actions Workflow für den Go-Kurs
+#
+# Jobs:
+#   1. lint       – gofmt-Formatierung und go vet
+#   2. build      – go build ./... für alle Kapitel
+#   3. test       – go test ./... (mit Cleanup, pipefail, Artifact-Upload)
+#   4. golangci   – erweiterte Lint-Analyse (informativ, continue-on-error)
+#
+# Läuft bei jedem Push und Pull Request gegen main.
+# Concurrency-Cancel: bei neuen Pushes werden alte Runs des gleichen Refs abgebrochen.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Concurrency: laufende Workflows auf gleichem Branch abbrechen.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Gemeinsame Aufräum-Routine für temporäre Dateien aus Kapitel-Programmen.
+env:
+  CLEANUP_FILES: beispiel.txt person.json todos.json
+  GO_VERSION: "1.24"
+
+permissions:
+  contents: read
+
+jobs:
+  # ================================================================
+  # Job 1: Lint – Formatierung + statische Analyse
+  # ================================================================
+  lint:
+    name: Lint (gofmt & go vet)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go-version: ["1.24", "1.25"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go-version }}
+          cache: true
+          cache-dependency-path: '**/go.sum'
+
+      - name: gofmt Check
+        shell: bash
+        run: |
+          set -e
+          UNFORMATTED=$(gofmt -l .)
+          if [ -n "$UNFORMATTED" ]; then
+            echo "❌ Diese Dateien sind nicht mit gofmt formatiert:"
+            echo "$UNFORMATTED"
+            echo ""
+            echo "Behebe es lokal mit: gofmt -w ."
+            exit 1
+          fi
+          echo "✅ gofmt: alle Dateien sauber."
+
+      - name: go vet
+        run: go vet ./...
+
+  # ================================================================
+  # Job 2: Build – alle Kapitel müssen kompilieren
+  # ================================================================
+  build:
+    name: Build (go build)
+    runs-on: ubuntu-latest
+    needs: lint
+    strategy:
+      fail-fast: false
+      matrix:
+        go-version: ["1.22", "1.23", "1.24", "1.25"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go-version }}
+          cache: true
+          cache-dependency-path: '**/go.sum'
+
+      - name: Build alle Kapitel
+        run: |
+          echo "Build mit Go ${{ matrix.go-version }} ..."
+          go build ./...
+          echo "✅ Build erfolgreich."
+
+  # ================================================================
+  # Job 3: Test – tatsächliche Tests laufen lassen
+  # ================================================================
+  test:
+    name: Test (go test)
+    runs-on: ubuntu-latest
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        go-version: ["1.24", "1.25"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go-version }}
+          cache: true
+          cache-dependency-path: '**/go.sum'
+
+      - name: Aufräumen vor Test
+        shell: bash
+        run: |
+          set -e
+          rm -f ${{ env.CLEANUP_FILES }}
+          go mod tidy
+
+      - name: Tests ausführen
+        # pipefail sorgt dafür, dass `go test` (nicht `tee`) den Exit-Code liefert.
+        shell: bash
+        run: |
+          set -o pipefail
+          go test -v ./... 2>&1 | tee test-output.log
+          # Bei "no test files" meldet Go exit 0 — alles gut.
+
+      - name: Aufräumen nach Test
+        if: always()
+        shell: bash
+        run: rm -f ${{ env.CLEANUP_FILES }}
+
+      - name: Test-Log hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-output-${{ matrix.go-version }}
+          path: test-output.log
+          retention-days: 7
+
+  # ================================================================
+  # Job 4: golangci-lint – erweiterte Lint-Analyse
+  # ================================================================
+  # Informativ: bei fehlschlagender Config failed der Job nicht den Workflow.
+  golangci:
+    name: golangci-lint (extended)
+    runs-on: ubuntu-latest
+    needs: lint
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: true
+          cache-dependency-path: '**/go.sum'
+
+      - name: golangci-lint installieren
+        shell: bash
+        run: |
+          # v1.64.5 ist die erste Version, die Go 1.24 vollständig unterstützt.
+          set -e
+          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh \
+            | sh -s -- -b "$(go env GOPATH)/bin" v1.64.5
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+
+      - name: golangci-lint ausführen
+        run: golangci-lint run ./...

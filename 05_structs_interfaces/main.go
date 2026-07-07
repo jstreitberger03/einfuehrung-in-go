@@ -18,10 +18,10 @@ import "fmt"
 
 // Person ist ein eigener Datentyp mit mehreren Feldern
 type Person struct {
-	Name    string
-	Alter   int
-	Stadt   string
-	Beruf   string
+	Name  string
+	Alter int
+	Stadt string
+	Beruf string
 }
 
 func main() {
@@ -99,9 +99,9 @@ func main() {
 	fmt.Println("\n=== Type Embedding ===")
 
 	mitarbeiter := Mitarbeiter{
-		Person:  Person{Name: "Eva", Alter: 32, Stadt: "Berlin", Beruf: "Entwicklerin"},
-		Firma:   "TechCorp",
-		Gehalt:  75000,
+		Person: Person{Name: "Eva", Alter: 32, Stadt: "Berlin", Beruf: "Entwicklerin"},
+		Firma:  "TechCorp",
+		Gehalt: 75000,
 	}
 	fmt.Println(mitarbeiter.vorstellen())
 	fmt.Printf("Firma: %s, Gehalt: %d €\n", mitarbeiter.Firma, mitarbeiter.Gehalt)
@@ -162,9 +162,9 @@ func (m Mensch) geraeuschMachen() string {
 
 // Mitarbeiter embeded Person – alle Person-Methoden sind verfügbar!
 type Mitarbeiter struct {
-	Person           // Embedding: Person wird eingebettet
-	Firma   string
-	Gehalt  int
+	Person // Embedding: Person wird eingebettet
+	Firma  string
+	Gehalt int
 }
 
 // Überschreibt die vorstellen()-Methode von Person

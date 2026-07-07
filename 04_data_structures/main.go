@@ -43,9 +43,9 @@ func main() {
 	fmt.Println("\n=== Slices ===")
 
 	// Ein Slice wird ohne Größe deklariert
-	var noten []int              // nil-Slice (noch leer)
-	noten = append(noten, 1)     // Element hinzufügen
-	noten = append(noten, 2, 3)  // Mehrere Elemente
+	var noten []int             // nil-Slice (noch leer)
+	noten = append(noten, 1)    // Element hinzufügen
+	noten = append(noten, 2, 3) // Mehrere Elemente
 	fmt.Println("Noten:", noten)
 
 	// Slice-Literal

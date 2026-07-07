@@ -8,8 +8,8 @@ Danke, dass du zum Kurs beitragen möchtest! 🎉 Hier erfährst du, wie du mitm
 
 | Was | Wie |
 |-----|-----|
-| 🐛 **Fehler melden** | [Issue erstellen](https://github.com/julianstreitberger/einfuehrung-in-go/issues/new) |
-| 💡 **Verbesserung vorschlagen** | [Issue erstellen](https://github.com/julianstreitberger/einfuehrung-in-go/issues/new) |
+| 🐛 **Fehler melden** | [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues/new) |
+| 💡 **Verbesserung vorschlagen** | [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues/new) |
 | ✍️ **Selbst beitragen** | Fork → Branch → PR (siehe unten) |
 
 ---
@@ -61,4 +61,4 @@ go test ./...
 
 ## Fragen?
 
-- [Issue erstellen](https://github.com/julianstreitberger/einfuehrung-in-go/issues/new)
+- [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues/new)

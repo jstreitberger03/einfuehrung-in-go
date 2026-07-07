@@ -53,11 +53,11 @@ func main() {
 
 	// Strukturierte Daten in JSON speichern
 	person := PersonJSON{
-		Name:    "Anna",
-		Alter:   28,
-		Stadt:   "Wien",
-		Hobbys:  []string{"Lesen", "Wandern", "Kochen"},
-		Aktiv:   true,
+		Name:   "Anna",
+		Alter:  28,
+		Stadt:  "Wien",
+		Hobbys: []string{"Lesen", "Wandern", "Kochen"},
+		Aktiv:  true,
 	}
 
 	// Go → JSON (Marshal)

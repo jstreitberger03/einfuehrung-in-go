@@ -28,3 +28,25 @@ Thumbs.db
 # Go workspace
 go.work
 go.work.sum
+
+# CI / Test-Reste
+test-output.log
+coverage.out
+coverage.html
+*.cover
+junit-*.xml
+
+# Runtime-Dateien, die Kapitel-Programme erzeugen.
+# `**` matcht in beliebiger Verzeichnistiefe (git ≥ 2.13).
+**/beispiel.txt
+**/person.json
+**/todos.json
+# Auch im Repo-Root möglich, falls jemand Programme dort startet.
+beispiel.txt
+person.json
+todos.json
+
+# Build-Artefakte
+*.test
+*.out
+junit-*.xml
