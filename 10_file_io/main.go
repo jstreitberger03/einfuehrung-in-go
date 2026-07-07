@@ -70,7 +70,10 @@ func main() {
 	fmt.Println(string(jsonDaten))
 
 	// JSON in Datei schreiben
-	os.WriteFile("person.json", jsonDaten, 0644)
+	if err := os.WriteFile("person.json", jsonDaten, 0644); err != nil {
+		fmt.Println("Fehler beim Schreiben der JSON-Datei:", err)
+		return
+	}
 	fmt.Println("✅ person.json wurde geschrieben")
 
 	// JSON aus Datei lesen und parsen

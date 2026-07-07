@@ -124,7 +124,9 @@ func httpServer() {
 		antwort := map[string]string{
 			"nachricht": fmt.Sprintf("Hallo, %s!", name),
 		}
-		json.NewEncoder(w).Encode(antwort)
+		if err := json.NewEncoder(w).Encode(antwort); err != nil {
+			log.Printf("Fehler beim JSON-Encode: %v", err)
+		}
 	})
 
 	port := ":8080"
@@ -197,12 +199,20 @@ func (l *TodoListe) laden() {
 	if err != nil {
 		return // Keine Datei = leere Liste
 	}
-	json.Unmarshal(daten, l)
+	if err := json.Unmarshal(daten, l); err != nil {
+		log.Printf("Konnte %s nicht parsen, starte mit leerer Liste: %v", l.datei, err)
+	}
 }
 
 func (l *TodoListe) speichern() {
-	daten, _ := json.MarshalIndent(l, "", "  ")
-	os.WriteFile(l.datei, daten, 0644)
+	daten, err := json.MarshalIndent(l, "", "  ")
+	if err != nil {
+		log.Printf("Konnte Todo-Liste nicht zu JSON serialisieren: %v", err)
+		return
+	}
+	if err := os.WriteFile(l.datei, daten, 0644); err != nil {
+		log.Printf("Konnte %s nicht schreiben: %v", l.datei, err)
+	}
 }
 
 func (l *TodoListe) anzeigen() {

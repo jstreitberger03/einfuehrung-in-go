@@ -7,9 +7,6 @@ run:
   timeout: 5m
   # Welche Verzeichnisse geprüft werden
   tests: true
-  # Lockerere Regeln für didaktische Übungs-Kapitel
-  skip-dirs:
-    - solutions
 
 linters:
   # Standard-Linter (alle aktiviert durch disable-all=false).
@@ -68,6 +65,10 @@ issues:
   # Maximale Anzahl an Issues, die pro Lint-Lauf gemeldet werden.
   max-issues-per-linter: 0
   max-same-issues: 0
+
+  # Verzeichnisse, die nicht geprüft werden (war früher run.skip-dirs).
+  exclude-dirs:
+    - solutions
 
   # Ausnahmen für unsere didaktischen Beispiele.
   exclude-rules:

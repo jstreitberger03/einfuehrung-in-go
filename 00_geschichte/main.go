@@ -84,8 +84,7 @@ func rubrik(titel string, erklaerung string) {
 // sauber voneinander trennt. Alle Längenberechnungen sind rune-basiert, damit
 // Umlaute und Emojis die Box nicht auseinanderziehen.
 func codeOutputBlock(titel string, codeLines []string, output string) {
-	border := "─" + strings.Repeat("─", boxBreite) + strings.Repeat("", 0)
-	border = strings.Repeat("─", boxBreite)
+	border := strings.Repeat("─", boxBreite)
 
 	fmt.Println()
 	fmt.Println("  ┌" + border + "┐")

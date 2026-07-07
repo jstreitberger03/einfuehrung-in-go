@@ -9,7 +9,10 @@ import "math"
 // Pi ist ein exportierter Wert (≈ 3.14159)
 const Pi = 3.141592653589793
 
-// pi ist ein nicht-exportierter Wert (nur innerhalb des Pakets sichtbar)
+// pi ist ein nicht-exportierter Wert (nur innerhalb des Pakets sichtbar).
+// Bewusst ungenutzt – demonstriert im Kapitel Sichtbarkeit/Namenskonvention.
+//
+//nolint:unused
 const pi = 3.14
 
 // Addiere berechnet a + b
@@ -22,7 +25,10 @@ func Subtrahiere(a, b int) int {
 	return a - b
 }
 
-// verdoppeln ist nicht-exportiert (beginnt mit Kleinbuchstaben)
+// verdoppeln ist nicht-exportiert (beginnt mit Kleinbuchstaben).
+// Bewusst ungenutzt – demonstriert Sichtbarkeit im Kapitel.
+//
+//nolint:unused
 func verdoppeln(x int) int {
 	return x * 2
 }

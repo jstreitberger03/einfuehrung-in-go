@@ -85,6 +85,7 @@ func main() {
 	fmt.Printf("Preis: %.2f €\n", preis)
 	fmt.Printf("Mehrwertsteuer (%.0f%%): %.2f €\n", mehrwertsteuer*100, steuer)
 	fmt.Printf("Gesamt: %.2f €\n", preis+steuer)
+	fmt.Printf("Pi (15 Nachkommastellen): %.15f\n", piExakt)
 
 	// --- fmt.Printf — Formatierte Ausgabe ---
 	// %d  = ganze Zahl (decimal)

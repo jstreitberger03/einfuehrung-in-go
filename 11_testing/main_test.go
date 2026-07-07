@@ -99,7 +99,8 @@ func TestMax(t *testing.T) {
 
 func BenchmarkFibonacci(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Fibonacci(20)
+		// Benchmark ignoriert den Fehler – Korrektheit testen andere Tests.
+		_, _ = Fibonacci(20)
 	}
 }
 
