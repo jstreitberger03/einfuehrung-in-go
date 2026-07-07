@@ -53,3 +53,10 @@ func main() {
 // 3. Berechne 123 * 456 und gib das Ergebnis aus
 // 4. Gib drei Zeilen mit jeweils einem fmt.Println() aus
 // ---------------------------------------------------------------------------
+//
+// 🎬 Weiterführende Ressource (englisch):
+// "Learn GO Fast: Full Tutorial" von Alex Mux
+// https://www.youtube.com/watch?v=8uiZC0l4Ajw&t=1123s
+// Ein kompaktes 1-Stunden-Tutorial, das die Go-Grundlagen wiederholt
+// und zeigt, wie man eine API baut. Start bei Minute 18:43.
+// ---------------------------------------------------------------------------
