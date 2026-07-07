@@ -74,6 +74,48 @@ func main() {
 	fmt.Println("\n=== Zero Values ===")
 	fmt.Printf("int: %d, float64: %.1f, string: %q, bool: %v\n", x, y, z, w)
 
+	// ==========================================
+	// ⚠️ Häufige Fehler: Strings (aus dem Video)
+	// ==========================================
+	//
+	// ❌ FALSCH: string kann nicht nil sein!
+	//   var s string = nil  // COMPILER-FEHLER!
+	//
+	// ✅ RICHTIG: String ohne Wert = leerer String ""
+	//   var s string  // s = ""  (Zero Value)
+	//   s := "Hallo"   // direkt zuweisen
+	//
+	// ❌ VORSICHT: int = 0 bedeutet "0 Jahre", nicht "unbekannt"
+	//   var alter int = 0  // Syntaktisch korrekt, aber semantisch zweideutig
+	//   Ist das "0 Jahre alt" oder "Alter unbekannt"?
+	//
+	// ✅ BESSER: Separaten booleschen Zustand verwenden
+	//   var alterBekannt = false              // klar: "unbekannt"
+	//   var alterWert = 30                    // separat speichern
+	// (Für Pointer *int siehe Kapitel 6)
+
+	fmt.Println("\n⚠️ Wichtige Lektionen aus dem Video:")
+	fmt.Println("   1. Strings: var s string → s ist leer (\"\"), nicht nil!")
+	fmt.Println("   2. Konstanten: const ist zur Compile-Zeit fix, nicht zur Laufzeit änderbar")
+
+	// ==========================================
+	// ⚠️ Häufige Fehler: Konstanten (aus dem Video)
+	// ==========================================
+	//
+	// ❌ FALSCH: Konstante nachträglich ändern
+	//   const x = 10
+	//   x = 20  // COMPILER-FEHLER: x ist unveränderlich!
+	//
+	// ❌ FALSCH: const für Werte verwenden, die erst zur Laufzeit bekannt sind
+	//   const heute = time.Now()  // COMPILER-FEHLER!
+	//
+	// ✅ RICHTIG: const nur für Werte, die zur Compile-Zeit feststehen
+	//   const pi = 3.14159
+	//   const url = "https://api.example.com"
+	//
+	// ✅ Für Laufzeit-Werte: var verwenden
+	//   var heute = time.Now()
+
 	// --- Konstanten ---
 	// Konstanten können nicht geändert werden!
 	const mehrwertsteuer = 0.19

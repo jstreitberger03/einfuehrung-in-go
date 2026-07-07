@@ -76,7 +76,7 @@ Ergänzend zu diesem Kurs empfehle ich folgende Video-Ressource:
 
 | Video | Beschreibung |
 |-------|-------------|
-| [**Learn GO Fast: Full Tutorial**](https://www.youtube.com/watch?v=8uiZC0l4Ajw) von Alex Mux | Ein ca. 1-stündiges, kompaktes Go-Tutorial auf Englisch – ideal als ergänzende Videobegleitung. Deckt die Grundlagen ab und zeigt den Bau einer API. Start bei Minute 18:43. |
+| [**Learn GO Fast: Full Tutorial**](https://www.youtube.com/watch?v=8uiZC0l4Ajw) von Alex Mux | Ein ca. 1-stündiges, kompaktes Go-Tutorial auf Englisch – ideal als ergänzende Videobegleitung. Deckt die Grundlagen ab und zeigt den Bau einer API. Enthält anschauliche Negativbeispiele (z.B. zu Strings und Konstanten). Die passenden Kapitel im Kurs verweisen darauf mit ⚠️-Hinweisen. |
 
 ---
 
