@@ -64,6 +64,35 @@ func main() {
 	var istCool bool = true
 	fmt.Println("Ist Go cool?", istCool)
 
+	// ==========================================
+	// ⚠️ Häufige Fehler: Typ-Konvertierung (aus dem Video)
+	// ==========================================
+	//
+	// ❌ FALSCH: int und float64 direkt verrechnen
+	//   var a int = 5
+	//   var b float64 = 3.14
+	//   var sum = a + b     // COMPILER-FEHLER: mismatched types int and float64
+	//
+	// ✅ RICHTIG: Explizite Konvertierung
+	//   var sum = float64(a) + b  // 8.14 ✓
+	//
+	// ❌ FALSCH: Verschiedene int-Typen mischen
+	//   var breite int = 10
+	//   var hoehe int32 = 20
+	//   var flaeche = breite + hoehe  // COMPILER-FEHLER!
+	//
+	// ✅ RICHTIG: Beide auf gleichen Typ bringen
+	//   var flaeche = breite + int(hoehe)  // 30 ✓
+	//
+	// ⚠️ Achtung: float → int schneidet Nachkommastellen ab (kein Runden!)
+	//   var pi = 3.99
+	//   var gerundet = int(pi)  // 3, nicht 4!
+
+	fmt.Println("\n⚠️ Wichtige Lektionen aus dem Video:")
+	fmt.Println("   1. Strings: var s string → s ist leer (\"\"), nicht nil!")
+	fmt.Println("   2. Typ-Konvertierung: int + float64 geht nicht direkt! Immer explizit konvertieren")
+	fmt.Println("   3. Konstanten: const ist zur Compile-Zeit fix, nicht zur Laufzeit änderbar")
+
 	// --- Nullwerte (Zero Values) ---
 	// In Go hat jede Variable einen Startwert, auch ohne Zuweisung:
 	var x int     // 0
@@ -93,10 +122,6 @@ func main() {
 	//   var alterBekannt = false              // klar: "unbekannt"
 	//   var alterWert = 30                    // separat speichern
 	// (Für Pointer *int siehe Kapitel 6)
-
-	fmt.Println("\n⚠️ Wichtige Lektionen aus dem Video:")
-	fmt.Println("   1. Strings: var s string → s ist leer (\"\"), nicht nil!")
-	fmt.Println("   2. Konstanten: const ist zur Compile-Zeit fix, nicht zur Laufzeit änderbar")
 
 	// ==========================================
 	// ⚠️ Häufige Fehler: Konstanten (aus dem Video)
