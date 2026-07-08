@@ -66,7 +66,7 @@ issues:
   max-issues-per-linter: 0
   max-same-issues: 0
 
-  # Verzeichnisse, die nicht geprüft werden (war früher run.skip-dirs).
+  # Verzeichnisse, die nicht geprüft werden.
   exclude-dirs:
     - solutions
 

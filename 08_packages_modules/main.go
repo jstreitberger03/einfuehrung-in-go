@@ -15,8 +15,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/julianstreitberger/einfuehrung-in-go/08_packages_modules/taschenrechner"
-	"github.com/julianstreitberger/einfuehrung-in-go/08_packages_modules/textutils"
+	"github.com/jstreitberger03/einfuehrung-in-go/08_packages_modules/taschenrechner"
+	"github.com/jstreitberger03/einfuehrung-in-go/08_packages_modules/textutils"
 )
 
 func main() {
