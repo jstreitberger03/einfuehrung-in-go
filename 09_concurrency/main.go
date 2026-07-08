@@ -1,13 +1,13 @@
 // Kapitel 9: Concurrency — Nebenläufigkeit in Go
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Goroutinen starten (das Go-Schlüsselwort)
 // - Channels zur Kommunikation
 // - Buffered vs. unbuffered Channels
 // - Select für mehrere Channels
 // - WaitGroup zum Warten auf Goroutinen
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -42,7 +42,7 @@ func main() {
 
 	// Goroutine sendet eine Nachricht
 	go func() {
-		nachrichten <- "Hallo vom Channel! 📨"
+		nachrichten <- "Hallo vom Channel! "
 	}()
 
 	// Hauptprogramm empfängt die Nachricht
@@ -59,7 +59,7 @@ func main() {
 
 	zahlen <- 10
 	zahlen <- 20
-	// zahlen <- 30 // 💥 WÜRDE BLOCKIEREN (Puffer voll)
+	// zahlen <- 30 // WÜRDE BLOCKIEREN (Puffer voll)
 
 	fmt.Println(<-zahlen) // 10
 	fmt.Println(<-zahlen) // 20
@@ -93,11 +93,11 @@ func main() {
 
 	go func() {
 		time.Sleep(50 * time.Millisecond)
-		chan1 <- "schnell 🏃"
+		chan1 <- "schnell "
 	}()
 	go func() {
 		time.Sleep(100 * time.Millisecond)
-		chan2 <- "langsam 🐢"
+		chan2 <- "langsam "
 	}()
 
 	select {
@@ -106,7 +106,7 @@ func main() {
 	case msg2 := <-chan2:
 		fmt.Println("Channel 2:", msg2)
 	case <-time.After(200 * time.Millisecond):
-		fmt.Println("Timeout ⏰")
+		fmt.Println("Timeout ")
 	}
 
 	// ==========================================
@@ -122,33 +122,33 @@ func main() {
 	}
 
 	wg.Wait() // Warte, bis alle fertig sind
-	fmt.Println("Alle Arbeiter fertig! ✅")
+	fmt.Println("Alle Arbeiter fertig! ")
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // --- Hilfsfunktionen ---
 
 func sagHallo(name string) {
-	fmt.Printf("Hallo, %s! (von Goroutine 👋)\n", name)
+	fmt.Printf("Hallo, %s! (von Goroutine )\n", name)
 }
 
 func arbeiter(id int, wg *sync.WaitGroup) {
 	defer wg.Done() // Signal: Diese Goroutine ist fertig
 	fmt.Printf("Arbeiter %d startet...\n", id)
 	time.Sleep(time.Duration(id*50) * time.Millisecond)
-	fmt.Printf("Arbeiter %d fertig ✅\n", id)
+	fmt.Printf("Arbeiter %d fertig \n", id)
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Starte 5 Goroutinen, die gleichzeitig "Hallo von #i" ausgeben
 // 2. Schreibe ein Programm mit einem buffered Channel (Puffer = 3)
 // 3. Erstelle einen Worker-Pool: 3 Goroutinen lesen von einem Channel
-//    und verarbeiten 10 Aufgaben
+// und verarbeiten 10 Aufgaben
 // 4. Schreibe ein Programm, das mit select auf einen Channel und
-//    einen Timeout wartet
+// einen Timeout wartet
 // 5. Simuliere ein Rennen: Zwei Goroutinen laufen parallel, wer zuerst
-//    5 Punkte erreicht, gewinnt
+// 5 Punkte erreicht, gewinnt
 // ---------------------------------------------------------------------------

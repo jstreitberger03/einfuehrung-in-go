@@ -1,18 +1,18 @@
 // Kapitel 11: Testen — Qualität sichern
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Unit-Tests mit Go schreiben
 // - Table-Driven Tests (das Go-typische Testmuster)
 // - Benchmarks messen
 // - Test Coverage prüfen
 //
-// 📖 Los geht's!
+// Los geht's!
 //
 // Wichtiger Hinweis: Die Tests zu diesem Kapitel befinden sich in
 // main_test.go im selben Ordner. Führe sie aus mit:
-//   go test -v .
-//   go test -bench .
-//   go test -cover .
+// go test -v .
+// go test -bench .
+// go test -cover .
 
 package main
 
@@ -28,15 +28,15 @@ func main() {
 	fmt.Println("Tests werden in Dateien mit _test.go geschrieben.")
 	fmt.Println()
 	fmt.Println("Führe die Tests aus:")
-	fmt.Println("  go test -v .          # Alle Tests ausführlich")
-	fmt.Println("  go test -bench .      # Benchmarks")
-	fmt.Println("  go test -cover .      # Testabdeckung")
-	fmt.Println("  go test -coverprofile=coverage.out .")
-	fmt.Println("  go tool cover -html=coverage.out")
+	fmt.Println(" go test -v . # Alle Tests ausführlich")
+	fmt.Println(" go test -bench . # Benchmarks")
+	fmt.Println(" go test -cover . # Testabdeckung")
+	fmt.Println(" go test -coverprofile=coverage.out .")
+	fmt.Println(" go tool cover -html=coverage.out")
 	fmt.Println()
 	fmt.Println("Öffne main_test.go, um die Tests zu sehen!")
 	fmt.Println()
-	fmt.Println("✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println(" Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // --- Funktionen, die wir testen werden ---
@@ -105,7 +105,7 @@ func Max(zahlen []int) (int, error) {
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Schreibe Tests für die IstPrimzahl-Funktion (main_test.go)
 // 2. Füge einen Test für den Fehlerfall von Durchschnitt hinzu

@@ -1,12 +1,12 @@
-# FAQ — Einführung in Go
+# FAQ: Einführung in Go
 
 Häufige Probleme und ihre Lösungen. Steht etwas nicht hier? [Erstelle ein Issue](https://github.com/jstreitberger03/einfuehrung-in-go/issues).
 
 ---
 
-## Installation & Setup
+## Installation und Setup
 
-### ❓ „go: command not found"
+### „go: command not found"
 
 Go ist nicht installiert oder nicht im PATH.
 
@@ -25,7 +25,7 @@ Nach der Installation Terminal neu starten.
 
 ---
 
-### ❓ „package main is not a package"
+### „package main is not a package"
 
 Du hast versucht, `go run .` im falschen Verzeichnis auszuführen.
 
@@ -37,7 +37,7 @@ go run .
 
 ---
 
-### ❓ „undefined: xyz"
+### „undefined: xyz"
 
 Der Compiler kennt die Variable oder Funktion nicht.
 
@@ -50,14 +50,14 @@ Der Compiler kennt die Variable oder Funktion nicht.
 
 ## Go-Konzepte
 
-### ❓ Warum `:=` statt `=`?
+### Warum `:=` statt `=`?
 
 - `:=` deklariert **und** initialisiert eine neue Variable: `name := "Anna"`
 - `=` weist einer **bereits existierenden** Variable einen Wert zu: `name = "Ben"`
 
 ---
 
-### ❓ Was bedeutet `_` (underscore) in Go?
+### Was bedeutet `_` (underscore) in Go?
 
 `_` ist der **Blank Identifier**. Er ignoriert Werte, die eine Funktion zurückgibt:
 ```go
@@ -66,35 +66,35 @@ sum, _ := divide(10, 3) // ignoriere den zweiten Rückgabewert
 
 ---
 
-### ❓ „declared but not used" — warum dieser Fehler?
+### „declared but not used": warum dieser Fehler?
 
 Go erlaubt keine ungenutzten Variablen. Entweder:
 - Verwende die Variable, oder
 - Ersetze sie mit `_`
 
 ```go
-// ❌ Fehler: x declared but not used
+// Fehler: x declared but not used
 x := 42
 
-// ✅ Richtig
+// Richtig
 x := 42
 fmt.Println(x)
 
-// ✅ Oder ignoriere bewusst
+// Oder ignoriere bewusst
 _ = 42
 ```
 
 ---
 
-### ❓ Wie vergleiche ich Fehler?
+### Wie vergleiche ich Fehler?
 
 ```go
-// ✅ Richtig (mit ==)
+// Richtig (mit ==)
 if err == io.EOF {
     // Dateiende erreicht
 }
 
-// ✅ Oder mit Fehlerprüfung
+// Oder mit Fehlerprüfung
 if err != nil {
     // Fehler behandeln
 }
@@ -102,12 +102,12 @@ if err != nil {
 
 ---
 
-### ❓ panic: runtime error: index out of range
+### panic: runtime error: index out of range
 
 Du greifst auf ein Slice-Element zu, das es nicht gibt:
 ```go
 s := []int{1, 2, 3}
-fmt.Println(s[5]) // ❌ Index 5 gibt es nicht (0-2)
+fmt.Println(s[5]) // Index 5 gibt es nicht (0-2)
 ```
 
 **Lösung:** Prüfe die Länge vor dem Zugriff.
@@ -116,7 +116,7 @@ fmt.Println(s[5]) // ❌ Index 5 gibt es nicht (0-2)
 
 ## Tests
 
-### ❓ „no test files"
+### „no test files"
 
 `go test` findet keine Testdateien. Stelle sicher, dass:
 - Die Datei auf `_test.go` endet
@@ -124,7 +124,7 @@ fmt.Println(s[5]) // ❌ Index 5 gibt es nicht (0-2)
 
 ---
 
-### ❓ „go test" zeigt nichts an?
+### „go test" zeigt nichts an?
 
 Tests sind erfolgreich durchgelaufen! Mit `-v` siehst du Details:
 ```bash
@@ -133,9 +133,9 @@ go test -v ./...
 
 ---
 
-## Module & Importe
+## Module und Importe
 
-### ❓ „could not import ..."
+### „could not import ..."
 
 Ein importiertes Paket wurde nicht gefunden.
 
@@ -148,7 +148,7 @@ go mod tidy  # Lädt fehlende Abhängigkeiten
 
 ## Hilfe finden
 
-- 🐛 Bug gefunden? [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues)
-- 📖 Offizielle [Go-Dokumentation](https://go.dev/doc/)
-- 💬 [Go Forum](https://forum.golangbridge.org/)
-- 🤖 [Go by Example](https://gobyexample.com/) — Beispiele auf Deutsch/Englisch
+- Bug gefunden? [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues)
+- Offizielle [Go-Dokumentation](https://go.dev/doc/)
+- [Go Forum](https://forum.golangbridge.org/)
+- [Go by Example](https://gobyexample.com/): Beispiele auf Deutsch/Englisch

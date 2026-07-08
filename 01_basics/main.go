@@ -1,13 +1,13 @@
 // Kapitel 1: Grundlagen — Variablen, Datentypen, Konstanten
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Variablen deklarieren und initialisieren
 // - Die wichtigsten Datentypen kennen (int, float64, string, bool)
 // - Konstanten verwenden
 // - Ein- und Ausgabe mit fmt
 // - Typ-Inferenz verstehen (:=)
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -39,8 +39,8 @@ func main() {
 	fmt.Println("Kinder:", kinder)
 
 	// --- Warum := statt var? ---
-	// var:   wenn du den Typ explizit angeben willst
-	// :=:    kurze Schreibweise innerhalb von Funktionen
+	// var: wenn du den Typ explizit angeben willst
+	// :=: kurze Schreibweise innerhalb von Funktionen
 	//
 	// Wichtig: := deklariert eine NEUE Variable.
 	// = weist einer EXISTIERENDEN Variable einen Wert zu.
@@ -88,48 +88,48 @@ func main() {
 	fmt.Printf("Pi (15 Nachkommastellen): %.15f\n", piExakt)
 
 	// --- fmt.Printf — Formatierte Ausgabe ---
-	// %d  = ganze Zahl (decimal)
-	// %f  = Dezimalzahl (float)
-	// %s  = Text (string)
-	// %t  = Wahrheitswert (bool)
-	// %v  = "Value" — wähle das passende Format automatisch
-	// %T  = Typ der Variable
+	// %d = ganze Zahl (decimal)
+	// %f = Dezimalzahl (float)
+	// %s = Text (string)
+	// %t = Wahrheitswert (bool)
+	// %v = "Value" — wähle das passende Format automatisch
+	// %T = Typ der Variable
 
 	fmt.Println("\n=== Formatierte Ausgabe ===")
 	fmt.Printf("Name: %s, Alter: %d, Größe: %.1f m\n", name, alter, groesse)
 	fmt.Printf("Typ von name: %T, Typ von alter: %T\n", name, alter)
 
 	// ==========================================
-	// ⚠️  Häufige Fehler – Zusammenfassung (aus dem Video)
+	// Häufige Fehler – Zusammenfassung (aus dem Video)
 	// ==========================================
 	//
 	// 1. STRINGS: var s string = nil ist VERBOTEN!
-	//    var s string → s ist leer (""), nicht nil!
+	// var s string → s ist leer (""), nicht nil!
 	//
 	// 2. TYP-KONVERTIERUNG: int + float64 geht NICHT direkt!
-	//    Immer explizit konvertieren: float64(a) + b
-	//    Auch verschiedene int-Typen (int + int32) sind inkompatibel.
-	//    float → int schneidet Nachkommastellen ab (kein Runden!)
+	// Immer explizit konvertieren: float64(a) + b
+	// Auch verschiedene int-Typen (int + int32) sind inkompatibel.
+	// float → int schneidet Nachkommastellen ab (kein Runden!)
 	//
 	// 3. KONSTANTEN: const ist zur Compile-Zeit fix.
-	//    Einmal gesetzt → unveränderlich.
-	//    const x = os.Hostname() geht nicht! Dafür var verwenden.
+	// Einmal gesetzt → unveränderlich.
+	// const x = os.Hostname() geht nicht! Dafür var verwenden.
 
-	fmt.Println("\n⚠️  Häufige Fehler aus dem Video:")
-	fmt.Println("   1. Strings: var s string = nil ❌ → s ist leer (\"\"), nicht nil!")
-	fmt.Println("   2. Typen: int + float64 ❌ → immer explizit konvertieren!")
-	fmt.Println("   3. Konstanten: const ist fix zur Compile-Zeit, nicht änderbar ❌")
+	fmt.Println("\n Häufige Fehler aus dem Video:")
+	fmt.Println(" 1. Strings: var s string = nil → s ist leer (\"\"), nicht nil!")
+	fmt.Println(" 2. Typen: int + float64 → immer explizit konvertieren!")
+	fmt.Println(" 3. Konstanten: const ist fix zur Compile-Zeit, nicht änderbar ")
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Deklariere Variablen für: deine Lieblingszahl, deine Lieblingsfarbe, dein Geburtsjahr
 // 2. Berechne dein Alter in Jahren (ungefähr) und gib es aus
 // 3. Definiere eine Konstante für die Lichtgeschwindigkeit (299_792_458 m/s)
 // 4. Gib den Satz "Ich heiße [name] und bin [alter] Jahre alt." mit fmt.Printf aus
 // 5. Tausche zwei Variablenwerte:
-//    a := 5; b := 10 → danach: a=10, b=5
+// a := 5; b := 10 → danach: a=10, b=5
 // ---------------------------------------------------------------------------

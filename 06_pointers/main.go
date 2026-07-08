@@ -1,13 +1,13 @@
 // Kapitel 6: Pointer — Referenzen verstehen
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Was sind Pointer? Adressen im Speicher
 // - Pointer deklarieren und dereferenzieren (*, &)
 // - nil vermeiden und prüfen
 // - Pointer als Funktionsparameter
 // - Stack vs. Heap (kurzer Überblick)
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -58,7 +58,7 @@ func main() {
 	fmt.Println("ptr ist nil:", ptr == nil)
 
 	// Achtung: Dereferenzierung von nil = panic!
-	// fmt.Println(*ptr) // 💥 panic: runtime error
+	// fmt.Println(*ptr) // panic: runtime error
 
 	// Sicherer Zugriff:
 	if ptr != nil {
@@ -97,17 +97,17 @@ func main() {
 	// 6. Wann Pointer verwenden? (Faustregeln)
 	// ==========================================
 	fmt.Println("\n=== Faustregeln für Pointer ===")
-	fmt.Println("✅ Pointer verwenden, wenn:")
-	fmt.Println("  - Du Werte in einer Funktion ändern willst")
-	fmt.Println("  - Große Structs vermeiden kopiert zu werden")
-	fmt.Println("  - nil als Zustand erlaubt sein soll")
+	fmt.Println(" Pointer verwenden, wenn:")
+	fmt.Println(" - Du Werte in einer Funktion ändern willst")
+	fmt.Println(" - Große Structs vermeiden kopiert zu werden")
+	fmt.Println(" - nil als Zustand erlaubt sein soll")
 	fmt.Println()
-	fmt.Println("❌ Kein Pointer, wenn:")
-	fmt.Println("  - Kleine, unveränderliche Werte (int, bool, float64)")
-	fmt.Println("  - nil keinen Sinn ergibt")
-	fmt.Println("  - Du den Wert nicht ändern musst")
+	fmt.Println(" Kein Pointer, wenn:")
+	fmt.Println(" - Kleine, unveränderliche Werte (int, bool, float64)")
+	fmt.Println(" - nil keinen Sinn ergibt")
+	fmt.Println(" - Du den Wert nicht ändern musst")
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // --- Hilfsfunktionen ---
@@ -153,11 +153,11 @@ func (k Kreis) String() string {
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Schreibe eine Funktion "swap(a, b *int)", die zwei Werte vertauscht
 // 2. Schreibe eine Funktion, die einen *string akzeptiert und den Wert
-//    in Großbuchstaben umwandelt (Hinweis: strings.ToUpper)
+// in Großbuchstaben umwandelt (Hinweis: strings.ToUpper)
 // 3. Erstelle ein Struct "Bankkonto" mit Methode "einzahlen(amount *float64)"
 // 4. Warum gibt es in Go keine call-by-reference? (Denkaufgabe)
 // ---------------------------------------------------------------------------

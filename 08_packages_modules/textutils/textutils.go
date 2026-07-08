@@ -5,7 +5,7 @@ import "strings"
 
 // Begruesse erstellt einen personalisierten Gruß
 func Begruesse(name string) string {
-	return "Hallo, " + name + "! 👋"
+	return "Hallo, " + name + "! "
 }
 
 // Grossschreiben wandelt einen String in Großbuchstaben um

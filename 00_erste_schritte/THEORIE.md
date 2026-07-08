@@ -1,4 +1,4 @@
-# 📖 Erste Schritte — Theorie vor dem Code
+# Erste Schritte: Theorie vor dem Code
 
 > **Optional.** Lies dieses Kapitel, wenn du zum allerersten Mal programmierst.
 > Es beantwortet drei Fragen, die fast jeder Anfänger hat.
@@ -7,7 +7,7 @@
 
 ---
 
-## ☕ Willkommen zum "Theorie vor dem Code"-Kapitel!
+## Willkommen zum "Theorie vor dem Code"-Kapitel!
 
 Dieses Kapitel beantwortet drei Fragen, die fast jeder am Anfang stellt:
 
@@ -15,19 +15,19 @@ Dieses Kapitel beantwortet drei Fragen, die fast jeder am Anfang stellt:
 2. Was macht ein **"Compiler"**?
 3. Was ist eine **"Variable"**?
 
-Du musst hier NICHTS schreiben. Lies einfach — gerne mit Kaffee. Danach geht es in
+Du musst hier NICHTS schreiben. Lies einfach, gerne mit Kaffee. Danach geht es in
 [`00_geschichte`](../00_geschichte/) mit der Geschichte der Programmiersprachen weiter.
 
 ---
 
 ## 1. Was ist ein Programm?
 
-> *Eine genaue Anleitung — wie ein Rezept.*
+> *Eine genaue Anleitung, wie ein Rezept.*
 
 Stell dir ein Rezept für Kuchen vor:
 
-1. 200 g Mehl in eine Schüssel geben.
-2. 100 g Zucker dazu.
+1. 200 g Mehl in eine Schüssel geben.
+2. 100 g Zucker dazu.
 3. 2 Eier aufschlagen.
 4. Alles 3 Minuten rühren.
 5. 30 Minuten backen.
@@ -35,7 +35,7 @@ Stell dir ein Rezept für Kuchen vor:
 Das ist eine **ANLEITUNG** mit klaren Schritten, in einer Reihenfolge, mit
 **ZUTATEN** (Daten) und einem **ERGEBNIS** (Kuchen).
 
-Ein **PROGRAMM** ist genau dasselbe — nur:
+Ein **PROGRAMM** ist genau dasselbe, nur:
 
 | Rezept            | Programm              |
 |-------------------|-----------------------|
@@ -57,9 +57,9 @@ Mehr nicht. Kein Zauberwerk. Nur eine sehr genaue Anleitung.
 
 ## 2. Was ist ein Compiler?
 
-> *Ein Übersetzer — von Menschensprache zu Maschinensprache.*
+> *Ein Übersetzer, der Menschensprache in Maschinensprache umwandelt.*
 
-Computer verstehen nur Nullen und Einsen — die sogenannte **MASCHINENSPRACHE**.
+Computer verstehen nur Nullen und Einsen, die sogenannte **MASCHINENSPRACHE**.
 
 ```
 "Hallo Welt" als Maschinensprache (Ausschnitt):
@@ -84,7 +84,7 @@ Stell dir vor: Du schreibst auf Deutsch, der Compiler übersetzt es in die Sprac
 
 ### Compiler vs. Interpreter
 
-Du wirst später noch hören: manche Sprachen haben statt eines Compilers einen **"Interpreter"** — der führt Code **Zeile für Zeile** aus, ohne dazwischen eine Binary zu erzeugen.
+Du wirst später noch hören: manche Sprachen haben statt eines Compilers einen **"Interpreter"**, der führt Code **Zeile für Zeile** aus, ohne dazwischen eine Binary zu erzeugen.
 
 |           | Compiler (Go)                              | Interpreter (Python)              |
 |-----------|--------------------------------------------|-----------------------------------|
@@ -95,7 +95,7 @@ Du wirst später noch hören: manche Sprachen haben statt eines Compilers einen 
 
 ## 3. Was ist eine Variable?
 
-> *Eine beschriftete Schachtel — mit Inhalt.*
+> *Eine beschriftete Schachtel mit Inhalt.*
 
 Stell dir eine beschriftete Kiste vor:
 
@@ -137,7 +137,7 @@ Was "drin" stehen darf, hängt vom **DATENTYP** ab:
 
 ### Konstanten
 
-Es gibt auch **KONSTANTEN** — Variablen, deren Wert sich nie ändert.
+Es gibt auch **KONSTANTEN**, Variablen, deren Wert sich nie ändert.
 Beispiel: die Mehrwertsteuer oder die Lichtgeschwindigkeit. Go schreibt dafür
 das Wort `const` davor. Mehr dazu in Kapitel [`01_basics`](../01_basics/).
 
@@ -149,21 +149,21 @@ das Wort `const` davor. Mehr dazu in Kapitel [`01_basics`](../01_basics/).
 
 | Begriff            | Kurz erklärt                                                                |
 |--------------------|-----------------------------------------------------------------------------|
-| 📦 **Programm**        | eine genaue Anleitung für einen Computer                                     |
-| 📦 **Maschinensprache** | die "Sprache" aus Nullen und Einsen, die der Prozessor versteht              |
-| 📦 **Compiler**        | übersetzt lesbaren Code in Maschinensprache                                  |
-| 📦 **Interpreter**     | führt Code Schritt für Schritt aus (Python)                                  |
-| 📦 **Variable**        | eine beschriftete Schachtel mit einem Wert                                   |
-| 📦 **Datentyp**        | sagt, welche Art von Wert etwas ist (`string`, `int`, …)                      |
-| 📦 **Konstante**       | eine Variable, deren Wert sich nie ändert                                     |
+| **Programm**        | eine genaue Anleitung für einen Computer                                     |
+| **Maschinensprache** | die "Sprache" aus Nullen und Einsen, die der Prozessor versteht              |
+| **Compiler**        | übersetzt lesbaren Code in Maschinensprache                                  |
+| **Interpreter**     | führt Code Schritt für Schritt aus (Python)                                  |
+| **Variable**        | eine beschriftete Schachtel mit einem Wert                                   |
+| **Datentyp**        | sagt, welche Art von Wert etwas ist (`string`, `int`, …)                      |
+| **Konstante**       | eine Variable, deren Wert sich nie ändert                                     |
 
-> 📑 Alle 7 Begriffe haben einen Eintrag im großen **Glossar** ([`../GLOSSARY.md`](../GLOSSARY.md)).
+> Alle 7 Begriffe haben einen Eintrag im großen **Glossar** ([`../GLOSSARY.md`](../GLOSSARY.md)).
 
 ---
 
 ## 5. War dieses Kapitel hilfreich für dich?
 
-> *Kurze Selbsteinschätzung — wichtig für deinen Lernpfad.*
+> *Kurze Selbsteinschätzung, wichtig für deinen Lernpfad.*
 
 Wenn du jetzt in einem Satz erklären kannst:
 
@@ -181,18 +181,18 @@ Es gibt **KEINEN** Zeitdruck. Lieber einmal verstanden, als dreimal überflogen.
 
 ---
 
-## 👍 Geschafft! Weiter zu [`00_geschichte`](../00_geschichte/)
+## Geschafft! Weiter zu [`00_geschichte`](../00_geschichte/)
 
-> ➜ Dort lernst du die Geschichte hinter den Programmiersprachen und **WARUM** ausgerechnet Go für dich interessant sein könnte.
+> Dort lernst du die Geschichte hinter den Programmiersprachen und **WARUM** ausgerechnet Go für dich interessant sein könnte.
 
-> 💡 Wenn du Go schon kennst und direkt loslegen willst, spring einfach zu
+> Wenn du Go schon kennst und direkt loslegen willst, spring einfach zu
 > [`00_intro`](../00_intro/) und überspringe die Geschichte. Beides ist okay.
 
-✅ Kapitel abgeschlossen!
+Kapitel abgeschlossen.
 
 ---
 
-## 📖 Quellcode
+## Quellcode
 
 Das Go-Programm, das diese Erklärung als Terminal-Output erzeugt, liegt unter
 [`00_erste_schritte/main.go`](main.go). Führe es aus mit:
@@ -203,7 +203,7 @@ go run 00_erste_schritte/main.go
 
 ---
 
-## 🏋️ Übungen *(alle optional, alle Theorie, kein Tippen)*
+## Übungen (alle optional, alle Theorie, kein Tippen)
 
 1. Erkläre in einem Satz jemand anderem, was ein "Programm" ist. Probiere es wirklich laut aus.
 2. Schau dir deinen Computer an: Wo "läuft" das aktuell geöffnete Programm gerade? Auf welchem Prozessor? Was macht der wohl?

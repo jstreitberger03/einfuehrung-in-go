@@ -1,12 +1,12 @@
 // Kapitel 5: Structs und Interfaces — Eigene Typen definieren
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Eigene Datentypen mit struct definieren
 // - Methoden (Funktionen mit Empfänger)
 // - Interfaces (implizite Implementierung)
 // - Type Embedding ("Vererbung" in Go)
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -106,7 +106,7 @@ func main() {
 	fmt.Println(mitarbeiter.vorstellen())
 	fmt.Printf("Firma: %s, Gehalt: %d €\n", mitarbeiter.Firma, mitarbeiter.Gehalt)
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // --- Struct-Definitionen ---
@@ -121,7 +121,7 @@ func (p Person) vorstellen() string {
 // Pointer-Empfänger: Änderungen sind auch außerhalb sichtbar!
 func (p *Person) geburtstagFeiern() string {
 	p.Alter++
-	return fmt.Sprintf("Happy Birthday, %s! Du bist jetzt %d! 🎂", p.Name, p.Alter)
+	return fmt.Sprintf("Happy Birthday, %s! Du bist jetzt %d! ", p.Name, p.Alter)
 }
 
 // --- Interfaces ---
@@ -137,7 +137,7 @@ type Hund struct {
 }
 
 func (h Hund) geraeuschMachen() string {
-	return fmt.Sprintf("%s macht: Wuff Wuff! 🐕", h.Name)
+	return fmt.Sprintf("%s macht: Wuff Wuff! ", h.Name)
 }
 
 // Katze implementiert Lebewesen automatisch
@@ -146,7 +146,7 @@ type Katze struct {
 }
 
 func (k Katze) geraeuschMachen() string {
-	return fmt.Sprintf("%s macht: Miau Miau! 🐱", k.Name)
+	return fmt.Sprintf("%s macht: Miau Miau! ", k.Name)
 }
 
 // Mensch implementiert Lebewesen automatisch
@@ -155,7 +155,7 @@ type Mensch struct {
 }
 
 func (m Mensch) geraeuschMachen() string {
-	return fmt.Sprintf("%s sagt: Hallo! 👋", m.Name)
+	return fmt.Sprintf("%s sagt: Hallo! ", m.Name)
 }
 
 // --- Type Embedding ---
@@ -174,7 +174,7 @@ func (m Mitarbeiter) vorstellen() string {
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Definiere ein struct "Buch" mit den Feldern: Titel, Autor, Seiten, Jahr
 // 2. Erstelle eine Methode "info()" für Buch, die eine Zusammenfassung zurückgibt

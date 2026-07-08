@@ -1,18 +1,18 @@
 // Kapitel 0: Einführung in Go
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Was ist Go? Warum Go lernen?
 // - Go installieren und ein erstes Programm schreiben
 // - Den Go Playground kennenlernen
 // - Grundlegende Struktur eines Go-Programms verstehen
 //
-// 📖 Los geht's!
-//    💡 Wenn du **ganz neu** in der Programmierung bist:
-//       1) lies zuerst das Kapitel `00_erste_schritte/` (reine Theorie),
-//       2) dann `00_geschichte/` (Geschichte hinter Go),
-//       3) und DANN dieses Kapitel hier.
+// Los geht's!
+// Wenn du **ganz neu** in der Programmierung bist:
+// 1) lies zuerst das Kapitel `00_erste_schritte/` (reine Theorie),
+// 2) dann `00_geschichte/` (Geschichte hinter Go),
+// 3) und DANN dieses Kapitel hier.
 //
-// 🕘 Reihenfolge für Anfänger: 00_erste_schritte (optional) → 00_geschichte →
+// Reihenfolge für Anfänger: 00_erste_schritte (optional) → 00_geschichte →
 // 00_intro → 01_basics → …
 
 package main
@@ -26,7 +26,7 @@ func main() {
 	// fmt.Println() gibt Text auf der Konsole aus.
 	// Der Befehl steht für "Print Line" – also "drucke Zeile".
 	fmt.Println("Hallo Welt!")
-	fmt.Println("Willkommen zum Go-Kurs! 🎉")
+	fmt.Println("Willkommen zum Go-Kurs! ")
 
 	// --- Ein kleines erstes Programm ---
 	// Du kannst direkt Werte ausgeben:
@@ -49,11 +49,11 @@ func main() {
 	// 3. Kommentare helfen, Code zu erklären
 	// 4. Go kann rechnen und Strings verbinden (+)
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Ändere den Hallo-Welt-Text auf "Hallo, [dein Name]!"
 // 2. Gib dein Alter aus: fmt.Println("Ich bin", 25, "Jahre alt")
@@ -61,7 +61,7 @@ func main() {
 // 4. Gib drei Zeilen mit jeweils einem fmt.Println() aus
 // ---------------------------------------------------------------------------
 //
-// 🎬 Weiterführende Ressource (englisch):
+// Weiterführende Ressource (englisch):
 // "Learn GO Fast: Full Tutorial" von Alex Mux
 // https://www.youtube.com/watch?v=8uiZC0l4Ajw&t=1123s
 // Ein kompaktes 1-Stunden-Tutorial, das die Go-Grundlagen wiederholt

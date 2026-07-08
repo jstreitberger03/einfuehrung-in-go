@@ -1,12 +1,12 @@
 // Kapitel 4: Datenstrukturen — Arrays, Slices, Maps
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Arrays (feste Größe) vs. Slices (flexibel)
 // - Slices: append, Slicing, make
 // - Maps: Key-Value-Speicher
 // - Range zum Iterieren
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -98,7 +98,7 @@ func main() {
 	if existiert {
 		fmt.Println("Alter von Eva:", alter)
 	} else {
-		fmt.Println("Eva nicht gefunden 😢")
+		fmt.Println("Eva nicht gefunden ")
 	}
 
 	// Löschen
@@ -131,11 +131,11 @@ func main() {
 		fmt.Println("-", farbe)
 	}
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Erstelle ein Array mit deinen 3 Lieblingszahlen und gib sie aus
 // 2. Erstelle ein leeres Slice und füge 5 Elemente mit append hinzu

@@ -1,12 +1,12 @@
 // Kapitel 10: Dateien & Daten — Lesen und Schreiben
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Dateien lesen und schreiben
 // - JSON-Daten verarbeiten (encoding/json)
 // - CSV-Daten lesen
 // - io.Reader und io.Writer verstehen
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -31,7 +31,7 @@ func main() {
 		fmt.Println("Fehler beim Schreiben:", err)
 		return
 	}
-	fmt.Println("✅ beispiel.txt wurde geschrieben")
+	fmt.Println(" beispiel.txt wurde geschrieben")
 
 	// ==========================================
 	// 2. Dateien lesen
@@ -61,7 +61,7 @@ func main() {
 	}
 
 	// Go → JSON (Marshal)
-	jsonDaten, err := json.MarshalIndent(person, "", "  ")
+	jsonDaten, err := json.MarshalIndent(person, "", " ")
 	if err != nil {
 		fmt.Println("Fehler beim JSON-Erzeugen:", err)
 		return
@@ -74,7 +74,7 @@ func main() {
 		fmt.Println("Fehler beim Schreiben der JSON-Datei:", err)
 		return
 	}
-	fmt.Println("✅ person.json wurde geschrieben")
+	fmt.Println(" person.json wurde geschrieben")
 
 	// JSON aus Datei lesen und parsen
 	jsonGelesen, err := os.ReadFile("person.json")
@@ -122,17 +122,17 @@ Clara,22,Hamburg`
 	// Prüfen, ob eine Datei existiert
 	info, err := os.Stat("go.mod")
 	if err == nil {
-		fmt.Printf("✅ go.mod existiert (%d Bytes)\n", info.Size())
+		fmt.Printf(" go.mod existiert (%d Bytes)\n", info.Size())
 	} else if os.IsNotExist(err) {
-		fmt.Println("❌ go.mod existiert nicht")
+		fmt.Println(" go.mod existiert nicht")
 	}
 
 	// Datei löschen
 	os.Remove("beispiel.txt")
 	os.Remove("person.json")
-	fmt.Println("✅ Temporäre Dateien gelöscht")
+	fmt.Println(" Temporäre Dateien gelöscht")
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // --- Struktur für JSON ---
@@ -146,11 +146,11 @@ type PersonJSON struct {
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Schreibe eine Liste von Personen als JSON in eine Datei und lies sie zurück
 // 2. Lese eine CSV-Datei mit Noten (Name, Fach, Note) und berechne den Durchschnitt
 // 3. Schreibe eine Funktion, die eine Datei Zeile für Zeile einliest und
-//    jede Zeile mit Zeilennummer ausgibt
+// jede Zeile mit Zeilennummer ausgibt
 // 4. Erstelle einen einfachen Notiz-Speicher: Notizen in JSON-Datei speichern
 // ---------------------------------------------------------------------------

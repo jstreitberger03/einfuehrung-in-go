@@ -1,11 +1,11 @@
 // Kapitel 12: Mini-Projekte — Das Gelernte anwenden
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Ein CLI-Tool bauen (Taschenrechner)
 // - Einen einfachen HTTP-Server schreiben
 // - Eine Todo-Liste mit Speicher
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -24,14 +24,14 @@ func main() {
 	fmt.Println()
 	fmt.Println("Dieses Kapitel enthält 3 Projekte. Wähle eines aus:")
 	fmt.Println()
-	fmt.Println("1️⃣  CLI-Taschenrechner")
-	fmt.Println("   go run . taschenrechner 5 + 3")
+	fmt.Println("1⃣ CLI-Taschenrechner")
+	fmt.Println(" go run . taschenrechner 5 + 3")
 	fmt.Println()
-	fmt.Println("2️⃣  HTTP-Server")
-	fmt.Println("   go run . server")
+	fmt.Println("2⃣ HTTP-Server")
+	fmt.Println(" go run . server")
 	fmt.Println()
-	fmt.Println("3️⃣  Todo-Liste")
-	fmt.Println("   go run . todo")
+	fmt.Println("3⃣ Todo-Liste")
+	fmt.Println(" go run . todo")
 	fmt.Println()
 
 	// Projekt-Auswahl
@@ -109,7 +109,7 @@ func httpServer() {
 		if name == "" {
 			name = "Gast"
 		}
-		fmt.Fprintf(w, "Hallo, %s! 👋\n", name)
+		fmt.Fprintf(w, "Hallo, %s! \n", name)
 		fmt.Fprintf(w, "Pfad: %s\n", r.URL.Path)
 		fmt.Fprintf(w, "Methode: %s\n", r.Method)
 	})
@@ -158,10 +158,10 @@ func todoApp() {
 
 	if len(os.Args) < 3 {
 		fmt.Println("Verwendung:")
-		fmt.Println("  go run . todo list          — Alle Aufgaben anzeigen")
-		fmt.Println("  go run . todo add <text>    — Aufgabe hinzufügen")
-		fmt.Println("  go run . todo done <id>     — Aufgabe erledigen")
-		fmt.Println("  go run . todo delete <id>   — Aufgabe löschen")
+		fmt.Println(" go run . todo list — Alle Aufgaben anzeigen")
+		fmt.Println(" go run . todo add <text> — Aufgabe hinzufügen")
+		fmt.Println(" go run . todo done <id> — Aufgabe erledigen")
+		fmt.Println(" go run . todo delete <id> — Aufgabe löschen")
 		return
 	}
 
@@ -205,7 +205,7 @@ func (l *TodoListe) laden() {
 }
 
 func (l *TodoListe) speichern() {
-	daten, err := json.MarshalIndent(l, "", "  ")
+	daten, err := json.MarshalIndent(l, "", " ")
 	if err != nil {
 		log.Printf("Konnte Todo-Liste nicht zu JSON serialisieren: %v", err)
 		return
@@ -217,16 +217,16 @@ func (l *TodoListe) speichern() {
 
 func (l *TodoListe) anzeigen() {
 	if len(l.Aufgaben) == 0 {
-		fmt.Println("📝 Keine Aufgaben vorhanden")
+		fmt.Println(" Keine Aufgaben vorhanden")
 		return
 	}
-	fmt.Println("📋 Todo-Liste:")
+	fmt.Println(" Todo-Liste:")
 	for _, aufgabe := range l.Aufgaben {
-		status := "⬜"
+		status := ""
 		if aufgabe.Erledigt {
-			status = "✅"
+			status = ""
 		}
-		fmt.Printf("  %s [%d] %s\n", status, aufgabe.ID, aufgabe.Text)
+		fmt.Printf(" %s [%d] %s\n", status, aufgabe.ID, aufgabe.Text)
 	}
 }
 
@@ -242,7 +242,7 @@ func (l *TodoListe) hinzufuegen(text string) {
 		Text: text,
 	})
 	l.speichern()
-	fmt.Printf("✅ Aufgabe hinzugefügt: %s\n", text)
+	fmt.Printf(" Aufgabe hinzugefügt: %s\n", text)
 }
 
 func (l *TodoListe) erledigen(id int) {
@@ -250,11 +250,11 @@ func (l *TodoListe) erledigen(id int) {
 		if a.ID == id {
 			l.Aufgaben[i].Erledigt = true
 			l.speichern()
-			fmt.Printf("✅ Aufgabe erledigt: %s\n", a.Text)
+			fmt.Printf(" Aufgabe erledigt: %s\n", a.Text)
 			return
 		}
 	}
-	fmt.Printf("❌ Aufgabe %d nicht gefunden\n", id)
+	fmt.Printf(" Aufgabe %d nicht gefunden\n", id)
 }
 
 func (l *TodoListe) loeschen(id int) {
@@ -262,15 +262,15 @@ func (l *TodoListe) loeschen(id int) {
 		if a.ID == id {
 			l.Aufgaben = append(l.Aufgaben[:i], l.Aufgaben[i+1:]...)
 			l.speichern()
-			fmt.Printf("🗑️ Aufgabe gelöscht: %s\n", a.Text)
+			fmt.Printf(" Aufgabe gelöscht: %s\n", a.Text)
 			return
 		}
 	}
-	fmt.Printf("❌ Aufgabe %d nicht gefunden\n", id)
+	fmt.Printf(" Aufgabe %d nicht gefunden\n", id)
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Erweitere den Taschenrechner um Potenzieren und Wurzel
 // 2. Füge dem HTTP-Server eine /api/status-Endpunkt hinzu

@@ -1,14 +1,14 @@
-# 📖 Geschichte der Programmiersprachen
+# Geschichte der Programmiersprachen
 
 > *Wie entstanden Programmiersprachen? Warum gerade Go?*
-> Eine kleine Reise durch 12 Sprachen — von 1843 bis heute.
-> **Kein Code-Schreiben nötig.** ⏱️ Lesedauer: ca. 5 Minuten.
+> Eine kleine Reise durch 12 Sprachen, von 1843 bis heute.
+> **Kein Code-Schreiben nötig.** Lesedauer: ca. 5 Minuten.
 
 ---
 
-## 💛 Schön, dass du da bist!
+## Schön, dass du da bist!
 
-Dies ist kein Programmier-Test, sondern eine kleine **Geschichte** — erzählt von
+Dies ist kein Programmier-Test, sondern eine kleine **Geschichte**, erzählt von
 Computern, Ideen und Menschen, die vor dir dieselben Fragen gestellt haben.
 
 ---
@@ -22,7 +22,7 @@ sieht so aus: `01001000 01100101 01101100 …`
 
 Schon nach kurzer Zeit fragten sich findige Köpfe:
 
-> *"Kann man Computern nicht einfach sagen, was sie tun sollen — in Worten,
+> *"Kann man Computern nicht einfach sagen, was sie tun sollen, in Worten,
 > die wir Menschen verstehen?"*
 
 ### So sieht "Hallo Welt" in Go aus
@@ -43,43 +43,43 @@ Schon nach kurzer Zeit fragten sich findige Köpfe:
 
 ## Fünf Epochen, in denen sich die Welt verändert hat
 
-> *Von 1843 bis heute — eine Reise in fünf Etappen.*
+> *Von 1843 bis heute, eine Reise in fünf Etappen.*
 
 | Epoche | Zeitraum | Was geschah |
 |--------|----------|-------------|
-| 1️⃣ Die Anfänge | 1843–1940 | Ideen ohne Computer — Berechnungspläne auf Papier |
-| 2️⃣ Erste Hochsprachen | 1950–1969 | Maschinen werden leistungsfähiger — Wörter ersetzen die Zahlenwüste |
-| 3️⃣ Strukturierte Programmierung | 1970–1989 | "Spaghetti-Code" war ein echtes Problem. Geordnete Strukturen und das legendäre C |
-| 4️⃣ Web-Ära | 1990–2009 | Das Internet verändert alles. Schnell schreiben ist wichtiger als schnell laufen |
-| 5️⃣ Cloud & Moderne | seit 2009 | Millionen Aufgaben gleichzeitig. Neue Sprachen — Go, Rust, Kotlin — antworten darauf |
+| Die Anfänge | 1843–1940 | Ideen ohne Computer, Berechnungspläne auf Papier |
+| Erste Hochsprachen | 1950–1969 | Maschinen werden leistungsfähiger, Wörter ersetzen die Zahlenwüste |
+| Strukturierte Programmierung | 1970–1989 | "Spaghetti-Code" war ein echtes Problem. Geordnete Strukturen und das legendäre C |
+| Web-Ära | 1990–2009 | Das Internet verändert alles, schnell schreiben ist wichtiger als schnell laufen |
+| Cloud und Moderne | seit 2009 | Millionen Aufgaben gleichzeitig, neue Sprachen (Go, Rust, Kotlin) antworten darauf |
 
 ---
 
-## 📖 Die wichtigsten Sprachen — wofür sie gut sind
+## Die wichtigsten Sprachen: wofür sie gut sind
 
 > *Du musst keine einzige davon heute lernen.*
 
 Diese Übersicht soll dir nur ein Gefühl dafür geben, warum es so viele
-Sprachen gibt — und warum jede ihre Daseinsberechtigung hat.
+Sprachen gibt, und warum jede ihre Daseinsberechtigung hat.
 
 | Sprache | Jahr | Kategorie | Hello World | Stärke | Schwäche | Heute |
 |---------|------|-----------|-------------|--------|----------|-------|
-| **FORTRAN** | 1957 | Wissenschaft | `PRINT *, 'Hello'` | superschnell für numerische Berechnungen | veraltete Syntax für moderne Augen | Wetter- & Klimamodelle, Physik-Simulationen |
+| **FORTRAN** | 1957 | Wissenschaft | `PRINT *, 'Hello'` | superschnell für numerische Berechnungen | veraltete Syntax für moderne Augen | Wetter- und Klimamodelle, Physik-Simulationen |
 | **LISP** | 1958 | Forschung | `(print "Hello")` | elegante Mathematik, Code = Daten | viele Klammern schrecken ab | KI-Forschung, Sprachverarbeitung |
 | **COBOL** | 1959 | Wirtschaft | `DISPLAY 'Hello'.` | extrem gut für Buchhaltung und Reports | sehr geschwätzig, schwer zu modernisieren | Banken, Versicherungen, Behörden |
 | **BASIC** | 1964 | Bildung | `10 PRINT "Hello"` | sehr einfach zu lernen | untauglich für große Projekte | Heimcomputer in den 80ern, heute Nische |
 | **Pascal** | 1970 | Lehre | `writeln('Hello');` | klar und didaktisch | kaum noch in der Industrie | Schulen, historisches Delphi |
 | **C** | 1972 | Systeme | `printf("Hello\n");` | extrem schnell, volle Speicherkontrolle | Fehler im Speicher sind berüchtigt | Betriebssysteme, Datenbanken, Go selbst |
-| **C++** | 1985 | Systeme | `cout << "Hello" << endl;` | C + Objektorientierung + Templates | viele Wege, es zu nutzen — viele Wege, Fehler zu machen | Spiele, Browser, Bürosoftware |
+| **C++** | 1985 | Systeme | `cout << "Hello" << endl;` | C + Objektorientierung + Templates | viele Wege, es zu nutzen, viele Wege, Fehler zu machen | Spiele, Browser, Bürosoftware |
 | **Python** | 1991 | Allzweck | `print('Hello')` | sehr lesbar, riesige Bibliotheken | langsam, schwer für Mobile/Spiele | Data Science, KI, Skripte |
 | **Java** | 1995 | Enterprise | `System.out.println("Hello");` | einmal schreiben, überall laufen | viel Speicher und Boilerplate | Große Firmen, Android-Apps |
 | **JavaScript** | 1995 | Web | `console.log('Hello');` | läuft in jedem Browser | chaotisch gewachsen, viele Frameworks | Web-Frontends, mit Node.js auch Server |
 | **PHP** | 1995 | Server-Web | `echo 'Hello';` | schnell zur lauffähigen Webseite | unübersichtlicher Code bei großen Projekten | WordPress, Wikipedia, große Teile des Webs |
-| **Go** | 2009 | Cloud & Server | `fmt.Println("Hello")` | schnell wie C, einfach wie Python, sicher wie Java | weniger Bibliotheken als Python/JS, keine Klassen-Vererbung | Cloud, Microservices, CLI, DevOps |
+| **Go** | 2009 | Cloud und Server | `fmt.Println("Hello")` | schnell wie C, einfach wie Python, sicher wie Java | weniger Bibliotheken als Python/JS, keine Klassen-Vererbung | Cloud, Microservices, CLI, DevOps |
 
 ---
 
-## Es gibt keine "beste Sprache" — nur das beste Werkzeug
+## Es gibt keine "beste Sprache", nur das beste Werkzeug
 
 > *Sprachen sind wie Werkzeuge in einer Werkstatt.*
 
@@ -87,14 +87,14 @@ Ein Hammer ist nicht "besser" als eine Säge. Es kommt darauf an, was du bauen w
 
 Wer eine App für 10.000 Menschen gleichzeitig schreibt, trifft andere
 Entscheidungen als jemand, der eine Webseite für einen kleinen Verein baut.
-Deshalb gibt es heute über 200 Sprachen — und jede Woche neue.
+Deshalb gibt es heute über 200 Sprachen, und jede Woche neue.
 Das ist kein Chaos, sondern Vielfalt.
 
 ---
 
-## 🐹 Und warum schauen wir uns jetzt Go an?
+## Und warum schauen wir uns jetzt Go an?
 
-> *Go wurde 2009 bei Google geboren — aus einem echten Problem.*
+> *Go wurde 2009 bei Google geboren, aus einem echten Problem.*
 
 Google hatte Anfang der 2000er ein gewaltiges Problem:
 
@@ -131,16 +131,16 @@ die Aufgaben von heute.*
 
 ---
 
-## 🛠️ Was Go anders macht als andere Sprachen
+## Was Go anders macht als andere Sprachen
 
 > *Sechs Eigenschaften, die du beim Lernen wiedererkennen wirst.*
 
 1. **Einfach zu lesen, einfach zu lernen**
-   Go hat nur 25 Schlüsselwörter. C hat über 30. Wer Go liest, versteht es — auch
+   Go hat nur 25 Schlüsselwörter. C hat über 30. Wer Go liest, versteht es, auch
    wenn er es nicht selbst schreibt.
 
 2. **Superschnelle Kompilierung**
-   Große Projekte wie Kubernetes (~3 Mio. Zeilen) bauen in unter 60 Sek.
+   Große Projekte wie Kubernetes (~3 Mio. Zeilen) bauen in unter 60 Sek.
    Vergleich: C++-Projekte ähnlicher Größe brauchen Minuten.
 
 3. **Eingebaute Nebenläufigkeit (Concurrency)**
@@ -158,11 +158,11 @@ die Aufgaben von heute.*
 6. **Eine Sprache, ein Stil**
    Es gibt nur einen verbreiteten Weg, Code zu formatieren. `go fmt`
    formatiert deinen Code automatisch korrekt. Streit über Einrückung?
-   Gibt es in Go nicht. 🎉
+   Gibt es in Go nicht.
 
 ---
 
-## ✨ Wo du Go heute überall im Einsatz siehst
+## Wo du Go heute überall im Einsatz siehst
 
 > *Auch wenn du es nicht merkst.*
 
@@ -170,27 +170,27 @@ die Aufgaben von heute.*
 
 | Projekt | Beschreibung |
 |---------|-------------|
-| 🐳 **Docker** | Container, die deine Apps starten |
-| ☸️ **Kubernetes** | Verwaltet tausende Container |
-| 🏗️ **Terraform** | Beschreibt Cloud-Infrastruktur als Code |
-| 📝 **Hugo** | Statische Webseiten |
-| 🌐 **Caddy** | Webserver mit automatischem HTTPS |
-| 📊 **Prometheus** | Monitoring für moderne Systeme |
-| 🗄️ **CockroachDB** | Verteilte SQL-Datenbank |
+| **Docker** | Container, die deine Apps starten |
+| **Kubernetes** | Verwaltet tausende Container |
+| **Terraform** | Beschreibt Cloud-Infrastruktur als Code |
+| **Hugo** | Statische Webseiten |
+| **Caddy** | Webserver mit automatischem HTTPS |
+| **Prometheus** | Monitoring für moderne Systeme |
+| **CockroachDB** | Verteilte SQL-Datenbank |
 
 ### Große Firmen, die Go produktiv einsetzen
 
 | Firma | Einsatz |
 |-------|---------|
-| 🔍 **Google** | Ursprung und viele interne Tools |
-| 🚖 **Uber** | Geokoordinaten und Matching in Echtzeit |
-| 📺 **Twitch** | Video-Pipeline für Live-Streams |
-| 💳 **Stripe** | Teile der Zahlungs-Infrastruktur |
-| ☁️ **Cloudflare** | DNS, Edge-Computing, Sicherheit |
-| 📦 **Dropbox** | Magischer Datei-Sync |
+| **Google** | Ursprung und viele interne Tools |
+| **Uber** | Geokoordinaten und Matching in Echtzeit |
+| **Twitch** | Video-Pipeline für Live-Streams |
+| **Stripe** | Teile der Zahlungs-Infrastruktur |
+| **Cloudflare** | DNS, Edge-Computing, Sicherheit |
+| **Dropbox** | Magischer Datei-Sync |
 
 Go ist keine "Geheimtipp"-Sprache mehr, sondern Werkzeug der Profis in deinem
-Alltag — meist unsichtbar im Hintergrund.
+Alltag, meist unsichtbar im Hintergrund.
 
 ---
 
@@ -198,15 +198,15 @@ Alltag — meist unsichtbar im Hintergrund.
 
 > *Einige reale Ideen von Junior-Entwicklerinnen:*
 
-- 🌐 Eine eigene Web-API (z. B. für deine Wetter-App)
-- 🛠️ Ein CLI-Tool, das im Terminal Aufgaben erleichtert
-- 🤖 Einen Chatbot mit gleichzeitigen Verbindungen
-- 📁 Ein Programm, das tausende Dateien verarbeitet
-- ☁️ Eine kleine Cloud-App auf AWS, GCP oder Azure
-- 🔎 Einen URL-Shortener mit eigener Datenbank
-- 🧪 Automatisierte Tests für andere Programme
+- Eine eigene Web-API (z. B. für deine Wetter-App)
+- Ein CLI-Tool, das im Terminal Aufgaben erleichtert
+- Einen Chatbot mit gleichzeitigen Verbindungen
+- Ein Programm, das tausende Dateien verarbeitet
+- Eine kleine Cloud-App auf AWS, GCP oder Azure
+- Einen URL-Shortener mit eigener Datenbank
+- Automatisierte Tests für andere Programme
 
-All das geht mit Go — und alles davon lernst du in diesem Kurs.
+All das geht mit Go, und alles davon lernst du in diesem Kurs.
 
 ---
 
@@ -214,29 +214,29 @@ All das geht mit Go — und alles davon lernst du in diesem Kurs.
 
 > *Vom "Hallo Welt" bis zur eigenen Funktion.*
 
-| ⏱️ Zeit | ➜ Kapitel | Thema |
+| Zeit | Kapitel | Thema |
 |---------|-----------|-------|
-| 5 min | `00_intro` | Dein erstes Programm |
-| 15 min | `01_basics` | Variablen und Texte |
-| 35 min | `02_control_flow` | Entscheidungen & Schleifen |
-| 60 min | `03_functions` | Wiederverwendbarer Code |
-| 90 min | `04_data_structures` | Listen & Tabellen |
+| 5 min | `00_intro` | Dein erstes Programm |
+| 15 min | `01_basics` | Variablen und Texte |
+| 35 min | `02_control_flow` | Entscheidungen und Schleifen |
+| 60 min | `03_functions` | Wiederverwendbarer Code |
+| 90 min | `04_data_structures` | Listen und Tabellen |
 
 Alles weitere findest du im **[Lernpfad](../LEARNING_PATH.md)**.
 
 ---
 
-## 💛 Bereit? Dann auf zu [`00_intro`](../00_intro/)!
+## Bereit? Dann auf zu [`00_intro`](../00_intro/)!
 
-> 💡 Kleiner Tipp: Du musst NICHTS installieren, um weiterzumachen.
+> Kleiner Tipp: Du musst NICHTS installieren, um weiterzumachen.
 > Öffne [go.dev/play](https://go.dev/play/), kopiere ein Code-Schnipsel
 > aus `00_intro` und klicke **"Run"**.
 
-✅ Kapitel abgeschlossen!
+Kapitel abgeschlossen.
 
 ---
 
-## 📖 Quellcode
+## Quellcode
 
 Das Go-Programm, das diese Geschichte als Terminal-Output erzeugt, liegt unter
 [`00_geschichte/main.go`](main.go). Führe es aus mit:
@@ -247,9 +247,9 @@ go run 00_geschichte/main.go
 
 ---
 
-## 🏋️ Übungen *(alle optional, keinerlei Druck)*
+## Übungen (alle optional, keinerlei Druck)
 
 1. Welche der 12 Sprachen in der Tabelle hat dich am meisten überrascht? Recherchiere im Internet, was heute damit gebaut wird.
 2. Suche "Hello World in Rust" und vergleiche: wieviel mehr oder weniger Code braucht es gegenüber Go?
-3. Bonus: Stell dir vor, du müsstest 1.000.000 Anfragen pro Sekunde beantworten. Welche der genannten Sprachen wäre deiner Meinung nach die erste Wahl — und warum?
+3. Bonus: Stell dir vor, du müsstest 1.000.000 Anfragen pro Sekunde beantworten. Welche der genannten Sprachen wäre deiner Meinung nach die erste Wahl, und warum?
 4. Bonus: Welche Firma aus der Liste oben beeindruckt dich am meisten, dass sie Go einsetzt? Lese 5 Minuten über ihr Go-Projekt auf deren Webseite.

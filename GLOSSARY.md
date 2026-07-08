@@ -1,15 +1,15 @@
-# Glossar — Einführung in Go
+# Glossar: Einführung in Go
 
 Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kurs.
 
-> Neu: **Geschichte & Hintergründe** findest du ganz unten — passend zum Kapitel `00_geschichte`.
+> Neu: **Geschichte und Hintergründe** findest du ganz unten, passend zum Kapitel `00_geschichte`.
 
 ---
 
 ## A
 
 **Ada Lovelace**
-: Britische Mathematikerin (1815–1852). Sie schrieb 1843 den ersten bekannten Algorithmus — den Plan einer Berechnung — und gilt als erste Programmiererin der Welt.
+: Britische Mathematikerin (1815–1852). Sie schrieb 1843 den ersten bekannten Algorithmus, den Plan einer Berechnung, und gilt als erste Programmiererin der Welt.
 
 **Algorithmus**
 : Eine eindeutige, schrittweise Anleitung zur Lösung eines Problems. Bevor es Computer gab, mussten Menschen Algorithmen per Hand ausführen.
@@ -18,14 +18,14 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Eine Datenstruktur mit fester Länge. In Go: `[5]int{1, 2, 3, 4, 5}`. Arrays haben eine feste Größe zur Compile-Zeit.
 
 **Assembler / Maschinensprache**
-: Die unterste Sprache, die ein Computer direkt versteht — für Menschen schwer zu lesen. Wurde in den 1950ern von Hochsprachen wie FORTRAN abgelöst.
+: Die unterste Sprache, die ein Computer direkt versteht. Für Menschen schwer zu lesen. Wurde in den 1950ern von Hochsprachen wie FORTRAN abgelöst.
 
 ---
 
 ## B
 
 **BASIC**
-: Beginner’s All-purpose Symbolic Instruction Code (1964). Eine einfache Sprache für Einsteiger — in den 80ern auf Heimcomputern populär.
+: Beginner's All-purpose Symbolic Instruction Code (1964). Eine einfache Sprache für Einsteiger, in den 80ern auf Heimcomputern populär.
 
 ---
 
@@ -41,7 +41,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Common Business-Oriented Language (1959). Eine Sprache für Wirtschaft und Behörden. Wird heute noch in Banken und Versicherungen eingesetzt.
 
 **Compiler**
-: Ein Übersetzer — von einer lesbaren Programmiersprache (z. B. Go) in Maschinensprache, die der Prozessor direkt versteht. In Go ruft `go build` den Compiler auf; `go run` ruft ihn ebenfalls auf und startet das fertige Programm gleich danach. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
+: Ein Übersetzer, der lesbaren Code (z. B. Go) in Maschinensprache umwandelt, die der Prozessor direkt versteht. In Go ruft `go build` den Compiler auf; `go run` ruft ihn ebenfalls auf und startet das fertige Programm gleich danach. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
 
 **Concurrency (Nebenläufigkeit)**
 : Die Fähigkeit, mehrere Aufgaben unabhängig voneinander auszuführen. In Go durch Goroutinen und Channels realisiert.
@@ -57,7 +57,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Ein externes Paket, von dem dein Modul abhängt. Verwaltet über `go.mod`.
 
 **Datentyp**
-: Sagt, welche **Art von Wert** eine Variable enthält — und damit, was man damit tun darf. Beispiele in Go: `string` (Text), `int` (ganze Zahl), `float64` (Kommazahl), `bool` (Ja/Nein). „Apfel" + 3 rechnen geht nicht, weil die Typen nicht passen. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
+: Sagt, welche **Art von Wert** eine Variable enthält, und damit, was man damit tun darf. Beispiele in Go: `string` (Text), `int` (ganze Zahl), `float64` (Kommazahl), `bool` (Ja/Nein). „Apfel" + 3 rechnen geht nicht, weil die Typen nicht passen. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
 
 ---
 
@@ -81,7 +81,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 ## G
 
 **Garbage Collection**
-: Automatische Speicherbereinigung. Go räumt nicht mehr benutzten Speicher selbst auf — anders als in C/C++.
+: Automatische Speicherbereinigung. Go räumt nicht mehr benutzten Speicher selbst auf, anders als in C/C++.
 
 **Go Module**
 : Eine Sammlung von Go-Paketen mit einer gemeinsamen Versionsverwaltung. Definiert in `go.mod`.
@@ -103,13 +103,13 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 ## I
 
 **IDE**
-: Integrated Development Environment — ein Texteditor + Debugger + Tools in einem Programm (z. B. VS Code, GoLand).
+: Integrated Development Environment: ein Texteditor + Debugger + Tools in einem Programm (z. B. VS Code, GoLand).
 
 **Interface**
-: Ein Satz von Methoden-Signaturen. Typen implementieren Interfaces implizit — kein explizites `implements` nötig.
+: Ein Satz von Methoden-Signaturen. Typen implementieren Interfaces implizit, kein explizites `implements` nötig.
 
 **Interpreter**
-: Führt Code **Zeile für Zeile** direkt aus, ohne vorher eine Binary zu erzeugen. Python arbeitet so. Go geht einen anderen Weg: erst kompilieren, dann starten — Vorteil: schnellerer Start, keine Zusatz-Software nötig. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
+: Führt Code **Zeile für Zeile** direkt aus, ohne vorher eine Binary zu erzeugen. Python arbeitet so. Go geht einen anderen Weg: erst kompilieren, dann starten. Vorteil: schnellerer Start, keine Zusatz-Software nötig. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
 
 ---
 
@@ -143,7 +143,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Eine Sammlung von Schlüssel-Wert-Paaren. Deklaration: `map[string]int{"Apfel": 5}`
 
 **Maschinensprache**
-: Die Sprache, die ein Computerprozessor direkt versteht: Folgen von Nullen und Einsen. Menschen schreiben kaum noch direkt darin — Hochsprachen wie Go werden erst vom Compiler in Maschinensprache übersetzt, bevor der Prozessor sie ausführen kann. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
+: Die Sprache, die ein Computerprozessor direkt versteht: Folgen von Nullen und Einsen. Menschen schreiben kaum noch direkt darin. Hochsprachen wie Go werden erst vom Compiler in Maschinensprache übersetzt, bevor der Prozessor sie ausführen kann. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
 
 **Methode**
 : Eine Funktion mit einem Empfänger (`receiver`). Ermöglicht objektorientierte Programmierung in Go.
@@ -169,7 +169,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Grundlegende Programmierweise. Beispiele: imperativ (C), objektorientiert (Java), funktional (LISP/Haskell), nebenläufig (Go).
 
 **Pascal**
-: Eine strukturierte Sprache (1970) — in den 80ern für die Lehre populär.
+: Eine strukturierte Sprache (1970), in den 80ern für die Lehre populär.
 
 **PHP**
 : Serverseitige Skriptsprache für Webseiten (1995). Treibt WordPress, Wikipedia und einen großen Teil des Webs.
@@ -178,7 +178,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Speicheradresse einer Variable. Deklariert mit `*T` und erstellt mit `&`.
 
 **Programm**
-: Eine genaue, geordnete Anleitung für einen Computer — vergleichbar mit einem Rezept: Zutaten (Daten) + Schritte + Ergebnis (Ausgabe auf dem Bildschirm). „Hallo Welt" ist das einfachste mögliche Programm. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
+: Eine genaue, geordnete Anleitung für einen Computer, vergleichbar mit einem Rezept: Zutaten (Daten) + Schritte + Ergebnis (Ausgabe auf dem Bildschirm). „Hallo Welt" ist das einfachste mögliche Programm. Siehe Kapitel [00_erste_schritte](00_erste_schritte).
 
 **Python**
 : Lesbare Sprache für schnelle Ergebnisse (1991). Beliebt in Datenanalyse, KI und Automatisierung.
@@ -194,7 +194,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Der Typ, an den eine Methode gebunden ist. Steht zwischen `func` und dem Methodennamen.
 
 **Rust**
-: Moderne Systemsprache (2010) — sehr sicher, aber mit steiler Lernkurve.
+: Moderne Systemsprache (2010), sehr sicher, aber mit steiler Lernkurve.
 
 ---
 
@@ -220,7 +220,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 : Ein Testmuster in Go, bei dem Testfälle in einer Liste (Tabelle) definiert werden.
 
 **Turingmaschine**
-: Ein gedankliches Computer­modell von Alan Turing (1936). Theoretischer Vorläufer aller heutigen Computer.
+: Ein gedankliches Computermodell von Alan Turing (1936). Theoretischer Vorläufer aller heutigen Computer.
 
 **Type Inference (Typ-Inferenz)**
 : Die Fähigkeit des Compilers, den Typ einer Variable aus dem Wert abzuleiten. Ermöglicht `x := 42` statt `var x int = 42`.
@@ -245,7 +245,7 @@ Ein kompaktes Nachschlagewerk für wichtige Go-Begriffe und Konzepte aus dem Kur
 
 ---
 
-## 📅 Zeitleiste (Bonus)
+## Zeitleiste (Bonus)
 
 | Jahr | Ereignis |
 |------|----------|

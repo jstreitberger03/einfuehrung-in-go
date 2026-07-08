@@ -1,4 +1,4 @@
-# Lösungen — Einführung in Go
+# Lösungen: Einführung in Go
 
 Dieser Ordner enthält Musterlösungen zu den Übungen am Ende jedes Kapitels.
 

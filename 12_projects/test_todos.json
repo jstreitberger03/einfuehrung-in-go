@@ -1,0 +1,19 @@
+{
+ "aufgaben": [
+  {
+   "id": 1,
+   "text": "Erste",
+   "erledigt": false
+  },
+  {
+   "id": 2,
+   "text": "Zweite",
+   "erledigt": false
+  },
+  {
+   "id": 3,
+   "text": "Dritte",
+   "erledigt": false
+  }
+ ]
+}

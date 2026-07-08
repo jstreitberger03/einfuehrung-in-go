@@ -1,6 +1,6 @@
-# Mitmachen — Einführung in Go
+# Mitmachen: Einführung in Go
 
-Danke, dass du zum Kurs beitragen möchtest! 🎉 Hier erfährst du, wie du mitmachen kannst.
+Danke, dass du zum Kurs beitragen möchtest! Hier erfährst du, wie du mitmachen kannst.
 
 ---
 
@@ -8,9 +8,9 @@ Danke, dass du zum Kurs beitragen möchtest! 🎉 Hier erfährst du, wie du mitm
 
 | Was | Wie |
 |-----|-----|
-| 🐛 **Fehler melden** | [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues/new) |
-| 💡 **Verbesserung vorschlagen** | [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues/new) |
-| ✍️ **Selbst beitragen** | Fork → Branch → PR (siehe unten) |
+| **Fehler melden** | [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues/new) |
+| **Verbesserung vorschlagen** | [Issue erstellen](https://github.com/jstreitberger03/einfuehrung-in-go/issues/new) |
+| **Selbst beitragen** | Fork, Branch, PR (siehe unten) |
 
 ---
 
@@ -41,7 +41,7 @@ go test ./...
 - **`gofmt`** verwenden (wird automatisch von `go fmt ./...` ausgeführt)
 - **`go vet ./...`** sollte keine Fehler melden
 - Kommentare auf Deutsch (wie der restliche Kurs)
-- Klare, verständliche Erklärungen — als würdest du es einem Freund erklären
+- Klare, verständliche Erklärungen, als würdest du es einem Freund erklären
 
 ### 2. Übungsaufgaben
 Übungen sollten:

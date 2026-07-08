@@ -1,12 +1,12 @@
 // Kapitel 8: Packages & Module — Code organisieren
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Eigene Pakete erstellen und importieren
 // - Exportierte vs. nicht-exportierte Namen
 // - go.mod verstehen
 // - Externe Pakete installieren
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -39,17 +39,17 @@ func main() {
 	text := "hallo go welt!"
 	gross := textutils.Grossschreiben(text)
 	fmt.Println("Original:", text)
-	fmt.Println("Groß:    ", gross)
+	fmt.Println("Groß: ", gross)
 
 	// ==========================================
 	// 2. Exportierte vs. nicht-exportierte Namen
 	// ==========================================
 	fmt.Println("\n=== Exportierte vs. Nicht-Exportierte Namen ===")
 
-	// ✅ Exportiert: beginnt mit Großbuchstaben
-	fmt.Println("✅ taschenrechner.Pi =", taschenrechner.Pi)
+	// Exportiert: beginnt mit Großbuchstaben
+	fmt.Println(" taschenrechner.Pi =", taschenrechner.Pi)
 
-	// ❌ Nicht exportiert: beginnt mit Kleinbuchstaben
+	// Nicht exportiert: beginnt mit Kleinbuchstaben
 	// fmt.Println(taschenrechner.pi) // Compiler-Fehler!
 	// fmt.Println(taschenrechner.verdoppeln(5)) // Compiler-Fehler!
 
@@ -74,22 +74,22 @@ func main() {
 	fmt.Println("- Externe Abhängigkeiten")
 	fmt.Println()
 	fmt.Println("Wichtige Befehle:")
-	fmt.Println("  go mod init <name>     — Modul initialisieren")
-	fmt.Println("  go mod tidy            — Abhängigkeiten bereinigen")
-	fmt.Println("  go get <paket>         — Paket installieren")
-	fmt.Println("  go list -m all         — Alle Abhängigkeiten anzeigen")
+	fmt.Println(" go mod init <name> — Modul initialisieren")
+	fmt.Println(" go mod tidy — Abhängigkeiten bereinigen")
+	fmt.Println(" go get <paket> — Paket installieren")
+	fmt.Println(" go list -m all — Alle Abhängigkeiten anzeigen")
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Erstelle ein neues Paket "wetter" (in einem Unterordner) mit einer
-//    Funktion "TemperaturBeschreibung(temp float64) string"
+// Funktion "TemperaturBeschreibung(temp float64) string"
 // 2. Füge eine nicht-exportierte Hilfsfunktion in taschenrechner hinzu
 // 3. Installiere ein externes Paket mit "go get" und verwende es
-//    (z.B. github.com/fatih/color für farbige Ausgabe)
+// (z.B. github.com/fatih/color für farbige Ausgabe)
 // 4. Erstelle eine init()-Funktion in einem Paket und beobachte, wann
-//    sie automatisch aufgerufen wird
+// sie automatisch aufgerufen wird
 // ---------------------------------------------------------------------------

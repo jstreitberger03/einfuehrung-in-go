@@ -1,13 +1,13 @@
 // Kapitel 7: Fehlerbehandlung — Errors, Panic, Defer
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Das error-Interface verstehen
 // - Fehler mit fmt.Errorf erzeugen
 // - Sentinelfehler (vordefinierte Fehler)
 // - panic und recover für Ausnahmesituationen
 // - defer für Aufräumarbeiten
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -25,7 +25,7 @@ func main() {
 
 	// error ist ein eingebautes Interface:
 	// type error interface {
-	//     Error() string
+	// Error() string
 	// }
 
 	datei, err := os.Open("nicht_existent.txt")
@@ -58,18 +58,18 @@ func main() {
 
 	_, err = kontostandAbrufen(-1)
 	if errors.Is(err, ErrUngueltigeID) {
-		fmt.Println("❌ Benutzer-ID ungültig!")
+		fmt.Println(" Benutzer-ID ungültig!")
 	} else if err != nil {
-		fmt.Println("❌ Unbekannter Fehler:", err)
+		fmt.Println(" Unbekannter Fehler:", err)
 	} else {
-		fmt.Println("✅ Kontostand abgerufen")
+		fmt.Println(" Kontostand abgerufen")
 	}
 
 	_, err = kontostandAbrufen(999)
 	if errors.Is(err, ErrBenutzerNichtGefunden) {
-		fmt.Println("❌ Benutzer nicht gefunden!")
+		fmt.Println(" Benutzer nicht gefunden!")
 	} else if err != nil {
-		fmt.Println("❌ Unbekannter Fehler:", err)
+		fmt.Println(" Unbekannter Fehler:", err)
 	}
 
 	// ==========================================
@@ -90,9 +90,9 @@ func main() {
 	sicherBerechnen(10, 0) // Kein Absturz!
 	sicherBerechnen(8, 4)
 
-	fmt.Println("\n✅ Programm läuft weiter, obwohl eine Division durch 0 versucht wurde!")
+	fmt.Println("\n Programm läuft weiter, obwohl eine Division durch 0 versucht wurde!")
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // --- Fehler erzeugen ---
@@ -150,7 +150,7 @@ func dateiBeispiel() {
 	}
 	// defer = führe diesen Befehl am Ende der Funktion aus
 	defer datei.Close()
-	fmt.Println("✅ Datei geöffnet. (Wird automatisch geschlossen)")
+	fmt.Println(" Datei geöffnet. (Wird automatisch geschlossen)")
 
 	// ... hier könnte noch Code stehen ...
 	fmt.Println("Arbeite mit der Datei...")
@@ -169,7 +169,7 @@ func teilenMitPanic(a, b int) int {
 func sicherBerechnen(a, b int) {
 	defer func() {
 		if r := recover(); r != nil {
-			fmt.Printf("⚠️ Panic abgefangen: %v (bei %d/%d)\n", r, a, b)
+			fmt.Printf(" Panic abgefangen: %v (bei %d/%d)\n", r, a, b)
 		}
 	}()
 
@@ -178,14 +178,14 @@ func sicherBerechnen(a, b int) {
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Schreibe eine Funktion, die einen String in int umwandelt
-//    (mit strconv.Atoi) und eigene Fehler kapselt
+// (mit strconv.Atoi) und eigene Fehler kapselt
 // 2. Erstelle eine Funktion "kontoBearbeiten", die mehrere Fehlerarten
-//    mit errors.Is unterscheiden kann
+// mit errors.Is unterscheiden kann
 // 3. Schreibe eine Funktion mit defer, die eine Nachricht "Funktion beendet"
-//    ausgibt – egal, ob ein Fehler auftrat
+// ausgibt – egal, ob ein Fehler auftrat
 // 4. Erstelle eine Funktion "findPerson", die einen benutzerdefinierten
-//    Fehler mit zusätzlichen Informationen zurückgibt (Tipp: struct + error)
+// Fehler mit zusätzlichen Informationen zurückgibt (Tipp: struct + error)
 // ---------------------------------------------------------------------------

@@ -1,13 +1,13 @@
 // Kapitel 3: Funktionen — Wiederverwendbarer Code
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Funktionen definieren und aufrufen
 // - Parameter und Rückgabewerte
 // - Mehrfachrückgaben (Go-Spezialität!)
 // - Benannte Rückgabewerte
 // - Variadic Functions (variable Parameteranzahl)
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -130,12 +130,12 @@ func summiere(zahlen ...int) int {
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Schreibe eine Funktion isEven(n int) bool, die prüft, ob n gerade ist
 // 2. Schreibe eine Funktion celsiusToFahrenheit(c float64) float64
 // 3. Schreibe eine Funktion minMax(a, b, c int) (min, max int)
 // 4. Schreibe eine variadic Funktion, die den Durchschnitt berechnet
 // 5. Schreibe eine Funktion factorial(n int) (int, error), die die Fakultät berechnet
-//    (Fehler bei negativen Zahlen)
+// (Fehler bei negativen Zahlen)
 // ---------------------------------------------------------------------------

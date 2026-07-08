@@ -1,12 +1,12 @@
 // Kapitel 2: Kontrollstrukturen — Entscheidungen treffen
 //
-// 🎯 Lernziele:
+// Lernziele:
 // - Bedingungen mit if/else
 // - Switch-Anweisungen
 // - For-Schleifen (die einzige Schleifenart in Go!)
 // - Schleifen mit break und continue steuern
 //
-// 📖 Los geht's!
+// Los geht's!
 
 package main
 
@@ -25,7 +25,7 @@ func main() {
 	alter := 18
 
 	if alter >= 18 {
-		fmt.Println("Du bist volljährig 🎉")
+		fmt.Println("Du bist volljährig ")
 	} else {
 		fmt.Println("Du bist noch minderjährig")
 	}
@@ -46,7 +46,7 @@ func main() {
 	// --- Kurze If-Anweisung ---
 	// Go erlaubt einen kurzen Ausdruck vor der Bedingung:
 	if x := math.Sqrt(144); x == 12 {
-		fmt.Printf("Die Wurzel von 144 ist %.0f ✅\n", x)
+		fmt.Printf("Die Wurzel von 144 ist %.0f \n", x)
 	}
 	// x ist außerhalb des if nicht mehr verfügbar!
 
@@ -59,9 +59,9 @@ func main() {
 
 	switch wochentag {
 	case "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag":
-		fmt.Println("Arbeitstag 😅")
+		fmt.Println("Arbeitstag ")
 	case "Samstag", "Sonntag":
-		fmt.Println("Wochenende 🎉")
+		fmt.Println("Wochenende ")
 	default:
 		fmt.Println("Ungültiger Wochentag")
 	}
@@ -71,11 +71,11 @@ func main() {
 
 	switch {
 	case stunde < 12:
-		fmt.Println("Guten Morgen! 🌅")
+		fmt.Println("Guten Morgen! ")
 	case stunde < 17:
-		fmt.Println("Guten Tag! ☀️")
+		fmt.Println("Guten Tag! ")
 	default:
-		fmt.Println("Guten Abend! 🌙")
+		fmt.Println("Guten Abend! ")
 	}
 
 	// ==========================================
@@ -133,11 +133,11 @@ func main() {
 	}
 	fmt.Println()
 
-	fmt.Println("\n✅ Kapitel abgeschlossen! Probiere die Übungen unten aus.")
+	fmt.Println("\n Kapitel abgeschlossen! Probiere die Übungen unten aus.")
 }
 
 // ---------------------------------------------------------------------------
-// 🏋️ Übungen
+// Übungen
 //
 // 1. Schreibe ein Programm, das prüft, ob eine Zahl gerade oder ungerade ist
 // 2. Gib die 7er-Reihe aus: 7, 14, 21, ..., 70
