@@ -76,7 +76,7 @@ func main() {
 
 	// --- Konstanten ---
 	// Konstanten können nicht geändert werden!
-	const mehrwertsteuer = 0.19
+	const mehrwertsteuer = 0.20
 	const piExakt = 3.141592653589793
 
 	fmt.Println("\n=== Konstanten ===")
@@ -100,7 +100,7 @@ func main() {
 	fmt.Printf("Typ von name: %T, Typ von alter: %T\n", name, alter)
 
 	// ==========================================
-	// Häufige Fehler – Zusammenfassung (aus dem Video)
+	// Häufige Fehler – Zusammenfassung
 	// ==========================================
 	//
 	// 1. STRINGS: var s string = nil ist VERBOTEN!
